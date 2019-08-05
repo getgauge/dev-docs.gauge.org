@@ -22,7 +22,7 @@ versions: prune
 
 	# for master branch, generate html, singlehtml
 	(cd $(WORKDIR)/latest;\
-	GAUGE_LATEST_VERSION=$(LATESTBRANCH) $(SPHINXBUILD) $(SPHINXOPTS) -b html . ../../html/latest -D html_theme_options.docs_version=master \
+	GAUGE_LATEST_VERSION=$(LATESTBRANCH) $(SPHINXBUILD) $(SPHINXOPTS) -b html . ../../html/latest -D html_theme_options.docs_version=latest \
 	    -D version=master -D release=master \
 		-A current_version=master -A latest_version=master -A versions="master latest"\
 		-A commit=$(MASTERSHA) -A github_version=master;\
