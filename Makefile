@@ -17,32 +17,16 @@ LATESTSHA 		= $(shell git rev-parse --short $(REMOTE)/$(LATESTBRANCH))
 
 versions: prune
 	# copy master
-	mkdir -p $(WORKDIR)/master; \
-	cp -r `ls | grep -v '$(BUILDDIR)'` $(WORKDIR)/master/;
-
-	# sync local with remote for latest branch
-	echo "Fetching $(LATESTBRANCH) from remote"; \
-	mkdir -p $(WORKDIR)/$(LATESTBRANCH); \
-	git worktree add -b $(LATESTBRANCH) $(WORKDIR)/$(LATESTBRANCH) $(REMOTE)/$(LATESTBRANCH);
+	mkdir -p $(WORKDIR)/latest; \
+	cp -r `ls | grep -v '$(BUILDDIR)'` $(WORKDIR)/latest/;
 
 	# for master branch, generate html, singlehtml
-	(cd $(WORKDIR)/master;\
-	GAUGE_LATEST_VERSION=$(LATESTBRANCH) $(SPHINXBUILD) $(SPHINXOPTS) -b html . ../../html/master -D html_theme_options.docs_version=master \
+	(cd $(WORKDIR)/latest;\
+	GAUGE_LATEST_VERSION=$(LATESTBRANCH) $(SPHINXBUILD) $(SPHINXOPTS) -b html . ../../html/latest -D html_theme_options.docs_version=master \
 	    -D version=master -D release=master \
 		-A current_version=master -A latest_version=master -A versions="master latest"\
 		-A commit=$(MASTERSHA) -A github_version=master;\
-	GAUGE_LATEST_VERSION=$(LATESTBRANCH) $(SPHINXBUILD) $(SPHINXOPTS) -b singlehtml . ../../singlehtml/master -A SINGLEHTML=true;);\
-
-	# for latest version branch, generate html, singlehtml
-	(cd $(WORKDIR)/$(LATESTBRANCH);\
-	GAUGE_LATEST_VERSION=$(LATESTBRANCH) $(SPHINXBUILD) $(SPHINXOPTS) -b html . ../../html/latest \
-		-D version=$(LATESTBRANCH) -D release=$(LATESTBRANCH) \
-		-A current_version=latest -A latest_version=$(LATESTBRANCH) -A versions="master latest"\
-		-A commit=$(shell git rev-parse --short HEAD) -A github_version=$(LATESTBRANCH);\
 	GAUGE_LATEST_VERSION=$(LATESTBRANCH) $(SPHINXBUILD) $(SPHINXOPTS) -b singlehtml . ../../singlehtml/latest -A SINGLEHTML=true;);\
-
-	rm -rf $(WORKDIR); \
-	git checkout master
 
 	# copy robots.txt
 	cp robots.txt $(BUILDDIR)/html
