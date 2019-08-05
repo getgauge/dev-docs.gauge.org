@@ -1,0 +1,714 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5C33ML2');</script>
+<!-- End Google Tag Manager -->
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Configuration &#8212; Gauge 1.0.5 documentation</title>
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="shortcut icon" href="_static/favicon.ico"/>
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="google-site-verification" content="yyEnHwGHUHTDtrSJG0WSBleL2wP7e1XfyuJsgRGasyk" />
+
+</head><body>
+  <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5C33ML2"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+  
+  <!-- <function StandaloneHTMLBuilder.handle_page.<locals>.<lambda> at 0x106d15d08> -->
+<header class="top">
+  <div class="header-container">
+    <a href="//gauge.org" class="logo">Gauge</a>
+    <nav class="nav">
+      <ul class="main-nav">
+        <li class="githubstar-box">
+          <a href="//github.com/getgauge/gauge" target="_blank">
+            <span  class="github-icon"></span>
+            <span class="github_star"></span></a>
+        </li>
+        <li class="link_home"><a href="//gauge.org">Home</a></li>
+        <li class="link_plugins"><a href="//gauge.org/plugins">Plugins</a></li>
+        <li class="link_doc"><a href="/">Documentation</a></li>
+        <li class="link_blog"><a href="//gauge.org/blog">Blog</a></li>
+        <li class="link_getstarted"><a href="//gauge.org/get_started">Get Started</a></li>
+      </ul>
+    </nav>
+    <div class="navbtn">
+      <div class="bar"></div>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+  <div class="row col-md-12 bigContainer">
+    
+    <div class="col-md-9 content">
+      
+      <div class="breadcrumbs-container" role="navigation" aria-label="breadcrumbs navigation">
+    <ul class="breadcrumbs">
+      
+        <li><a href="index.html">Documentation</a> &raquo;</li>
+          
+        <li>Configuration</li>
+      
+    </ul>
+    
+        <span class="breadcrumbs-aside">
+          
+            <a class="edit-on-github" href="https://github.com/getgauge/docs.gauge.org/blob/1.0.5/configuration.rst">Edit this Page</a> 
+          
+        </span>
+      
+  </div>
+      <a href="javascript:" id="return-to-top"><i></i></a>
+      
+  <div class="section" id="configuration">
+<h1>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h1>
+<p>All the Gauge specific internal configurations are stored in
+<code class="docutils literal notranslate"><span class="pre">gauge.properties</span></code> file present in <code class="docutils literal notranslate"><span class="pre">~/.gauge/config</span></code> in Mac/Linux and in <code class="docutils literal notranslate"><span class="pre">%APPDATA%\Gauge\config</span></code> in windows (or <code class="docutils literal notranslate"><span class="pre">GAUGE_ROOT</span></code>) repository. These properties are key value pairs.</p>
+<div class="section" id="global">
+<h2>Global<a class="headerlink" href="#global" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python notranslate" id="gauge-properties"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><a href="#gauge-properties-1"> 1</a>
+<a href="#gauge-properties-2"> 2</a>
+<a href="#gauge-properties-3"> 3</a>
+<a href="#gauge-properties-4"> 4</a>
+<a href="#gauge-properties-5"> 5</a>
+<a href="#gauge-properties-6"> 6</a>
+<a href="#gauge-properties-7"> 7</a>
+<a href="#gauge-properties-8"> 8</a>
+<a href="#gauge-properties-9"> 9</a>
+<a href="#gauge-properties-10">10</a>
+<a href="#gauge-properties-11">11</a>
+<a href="#gauge-properties-12">12</a>
+<a href="#gauge-properties-13">13</a>
+<a href="#gauge-properties-14">14</a>
+<a href="#gauge-properties-15">15</a>
+<a href="#gauge-properties-16">16</a>
+<a href="#gauge-properties-17">17</a>
+<a href="#gauge-properties-18">18</a>
+<a href="#gauge-properties-19">19</a>
+<a href="#gauge-properties-20">20</a>
+<a href="#gauge-properties-21">21</a>
+<a href="#gauge-properties-22">22</a>
+<a href="#gauge-properties-23">23</a>
+<a href="#gauge-properties-24">24</a>
+<a href="#gauge-properties-25">25</a>
+<a href="#gauge-properties-26">26</a>
+<a href="#gauge-properties-27">27</a>
+<a href="#gauge-properties-28">28</a>
+<a href="#gauge-properties-29">29</a>
+<a href="#gauge-properties-30">30</a>
+<a href="#gauge-properties-31">31</a>
+<a href="#gauge-properties-32">32</a></pre></div></td><td class="code"><div class="highlight"><pre><span></span><a name="gauge-properties-1"></a><span class="c1"># set to a url, which acts as plugin repository for Gauge.</span>
+<a name="gauge-properties-2"></a><span class="n">gauge_repository_url</span> <span class="o">=</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">downloads</span><span class="o">.</span><span class="n">gauge</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">plugin</span>
+<a name="gauge-properties-3"></a>
+<a name="gauge-properties-4"></a><span class="c1"># set to a url, which holds version information of Gauge.</span>
+<a name="gauge-properties-5"></a><span class="c1"># This is used to determine if an update is available.</span>
+<a name="gauge-properties-6"></a><span class="n">gauge_update_url</span> <span class="o">=</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">downloads</span><span class="o">.</span><span class="n">gauge</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">gauge</span>
+<a name="gauge-properties-7"></a>
+<a name="gauge-properties-8"></a><span class="c1"># set to a url, which acts as template repository for Gauge.</span>
+<a name="gauge-properties-9"></a><span class="n">gauge_templates_url</span> <span class="o">=</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">downloads</span><span class="o">.</span><span class="n">gauge</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">templates</span>
+<a name="gauge-properties-10"></a>
+<a name="gauge-properties-11"></a><span class="c1"># sets the timeout in milliseconds for making a</span>
+<a name="gauge-properties-12"></a><span class="c1"># connection to the language runner.</span>
+<a name="gauge-properties-13"></a><span class="n">runner_connection_timeout</span> <span class="o">=</span> <span class="mi">30000</span>
+<a name="gauge-properties-14"></a>
+<a name="gauge-properties-15"></a><span class="c1"># sets the timeout in milliseconds for making a connection</span>
+<a name="gauge-properties-16"></a><span class="c1"># to plugins (except language runner plugins).</span>
+<a name="gauge-properties-17"></a><span class="n">plugin_connection_timeout</span> <span class="o">=</span> <span class="mi">10000</span>
+<a name="gauge-properties-18"></a>
+<a name="gauge-properties-19"></a><span class="c1"># sets the timeout in milliseconds for a plugin to stop</span>
+<a name="gauge-properties-20"></a><span class="c1"># after a kill message has been sent.</span>
+<a name="gauge-properties-21"></a><span class="n">plugin_kill_timeout</span> <span class="o">=</span> <span class="mi">10000</span>
+<a name="gauge-properties-22"></a>
+<a name="gauge-properties-23"></a><span class="c1"># sets the timeout in milliseconds for requests from the</span>
+<a name="gauge-properties-24"></a><span class="c1"># language runner.</span>
+<a name="gauge-properties-25"></a><span class="c1"># If the size of the project is too big, Gauge may timeout before the</span>
+<a name="gauge-properties-26"></a><span class="c1"># runner returns the response message. This value can be configured</span>
+<a name="gauge-properties-27"></a><span class="c1"># accordingly.</span>
+<a name="gauge-properties-28"></a><span class="n">runner_request_timeout</span> <span class="o">=</span> <span class="mi">10000</span>
+<a name="gauge-properties-29"></a>
+<a name="gauge-properties-30"></a><span class="c1"># sets the timeout in milliseconds for responses from the</span>
+<a name="gauge-properties-31"></a><span class="c1"># language runner when invoked for IDEs.</span>
+<a name="gauge-properties-32"></a><span class="n">ide_request_timeout</span> <span class="o">=</span> <span class="mi">30000</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="section" id="local-project-level">
+<h2>Local (Project level)<a class="headerlink" href="#local-project-level" title="Permalink to this headline">¶</a></h2>
+<p>Certain properties can be configured in
+<code class="docutils literal notranslate"><span class="pre">env/default/default.properties</span></code>, which overrides the default
+properties and are scoped only to the current project. These are key
+value pairs.</p>
+<div class="highlight-python notranslate" id="default-properties"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><a href="#default-properties-1"> 1</a>
+<a href="#default-properties-2"> 2</a>
+<a href="#default-properties-3"> 3</a>
+<a href="#default-properties-4"> 4</a>
+<a href="#default-properties-5"> 5</a>
+<a href="#default-properties-6"> 6</a>
+<a href="#default-properties-7"> 7</a>
+<a href="#default-properties-8"> 8</a>
+<a href="#default-properties-9"> 9</a>
+<a href="#default-properties-10">10</a>
+<a href="#default-properties-11">11</a>
+<a href="#default-properties-12">12</a>
+<a href="#default-properties-13">13</a>
+<a href="#default-properties-14">14</a>
+<a href="#default-properties-15">15</a>
+<a href="#default-properties-16">16</a>
+<a href="#default-properties-17">17</a>
+<a href="#default-properties-18">18</a>
+<a href="#default-properties-19">19</a>
+<a href="#default-properties-20">20</a>
+<a href="#default-properties-21">21</a>
+<a href="#default-properties-22">22</a>
+<a href="#default-properties-23">23</a>
+<a href="#default-properties-24">24</a>
+<a href="#default-properties-25">25</a>
+<a href="#default-properties-26">26</a>
+<a href="#default-properties-27">27</a>
+<a href="#default-properties-28">28</a>
+<a href="#default-properties-29">29</a>
+<a href="#default-properties-30">30</a>
+<a href="#default-properties-31">31</a>
+<a href="#default-properties-32">32</a>
+<a href="#default-properties-33">33</a>
+<a href="#default-properties-34">34</a>
+<a href="#default-properties-35">35</a>
+<a href="#default-properties-36">36</a>
+<a href="#default-properties-37">37</a>
+<a href="#default-properties-38">38</a>
+<a href="#default-properties-39">39</a>
+<a href="#default-properties-40">40</a>
+<a href="#default-properties-41">41</a>
+<a href="#default-properties-42">42</a>
+<a href="#default-properties-43">43</a>
+<a href="#default-properties-44">44</a>
+<a href="#default-properties-45">45</a>
+<a href="#default-properties-46">46</a>
+<a href="#default-properties-47">47</a>
+<a href="#default-properties-48">48</a>
+<a href="#default-properties-49">49</a>
+<a href="#default-properties-50">50</a>
+<a href="#default-properties-51">51</a>
+<a href="#default-properties-52">52</a>
+<a href="#default-properties-53">53</a>
+<a href="#default-properties-54">54</a>
+<a href="#default-properties-55">55</a>
+<a href="#default-properties-56">56</a>
+<a href="#default-properties-57">57</a></pre></div></td><td class="code"><div class="highlight"><pre><span></span><a name="default-properties-1"></a><span class="c1"># The path to the gauge reports directory. Should be either relative to</span>
+<a name="default-properties-2"></a><span class="c1"># the project directory or an absolute path</span>
+<a name="default-properties-3"></a><span class="n">gauge_reports_dir</span> <span class="o">=</span> <span class="n">reports</span>
+<a name="default-properties-4"></a>
+<a name="default-properties-5"></a><span class="c1"># Set as false if gauge reports should not be overwritten</span>
+<a name="default-properties-6"></a><span class="c1"># on each execution.</span>
+<a name="default-properties-7"></a><span class="c1"># If set to true, a new time-stamped directory will be</span>
+<a name="default-properties-8"></a><span class="c1"># created on each execution.</span>
+<a name="default-properties-9"></a><span class="n">overwrite_reports</span> <span class="o">=</span> <span class="n">true</span>
+<a name="default-properties-10"></a>
+<a name="default-properties-11"></a><span class="c1"># Set to false to disable screenshots on failure in reports.</span>
+<a name="default-properties-12"></a><span class="n">screenshot_on_failure</span> <span class="o">=</span> <span class="n">false</span>
+<a name="default-properties-13"></a>
+<a name="default-properties-14"></a><span class="c1"># The path to the gauge logs directory. Should be either relative to the</span>
+<a name="default-properties-15"></a><span class="c1"># project directory or an absolute path</span>
+<a name="default-properties-16"></a><span class="n">logs_directory</span> <span class="o">=</span> <span class="n">GaugeLogs</span>
+<a name="default-properties-17"></a>
+<a name="default-properties-18"></a><span class="c1"># Specify the level at which cached objects should get removed while</span>
+<a name="default-properties-19"></a><span class="c1"># execution.</span>
+<a name="default-properties-20"></a>
+<a name="default-properties-21"></a><span class="c1"># Possible values for this property are &#39;suite&#39;, &#39;spec&#39; or &#39;scenario&#39;.</span>
+<a name="default-properties-22"></a><span class="c1"># default: &#39;scenario&#39;.</span>
+<a name="default-properties-23"></a><span class="n">gauge_clear_state_level</span> <span class="o">=</span> <span class="n">spec</span>
+<a name="default-properties-24"></a><span class="c1"># The above clears the objects after the execution of each specification, so</span>
+<a name="default-properties-25"></a><span class="c1"># that new objects are created for next execution.</span>
+<a name="default-properties-26"></a>
+<a name="default-properties-27"></a><span class="c1"># Set to false to disable screenshots on failure in reports.</span>
+<a name="default-properties-28"></a><span class="n">screenshot_on_failure</span> <span class="o">=</span> <span class="n">true</span>
+<a name="default-properties-29"></a>
+<a name="default-properties-30"></a><span class="c1"># Path to generate custom report theme.</span>
+<a name="default-properties-31"></a><span class="c1"># Should be either relative to the project directory or an absolute path.</span>
+<a name="default-properties-32"></a><span class="c1"># Default theme is used if not set</span>
+<a name="default-properties-33"></a><span class="n">GAUGE_HTML_REPORT_THEME_PATH</span> <span class="o">=</span> <span class="n">custom_theme_path</span>
+<a name="default-properties-34"></a>
+<a name="default-properties-35"></a><span class="c1"># sets the excluded dirs for gauge.</span>
+<a name="default-properties-36"></a><span class="c1"># Gauge always looks for concepts in the whole project, folders starting</span>
+<a name="default-properties-37"></a><span class="c1"># with dot(.) are excluded and a user can add folders to the excluded</span>
+<a name="default-properties-38"></a><span class="c1"># folders list by passing a comma separeted paths of folder.Paths can be</span>
+<a name="default-properties-39"></a><span class="c1"># relative to the path of directory or absolute.</span>
+<a name="default-properties-40"></a><span class="n">gauge_exclude_dirs</span> <span class="o">=</span> <span class="n">src</span><span class="o">/</span><span class="n">test</span><span class="p">,</span><span class="nb">bin</span>
+<a name="default-properties-41"></a>
+<a name="default-properties-42"></a><span class="c1"># This property enables saving execution results after execution.</span>
+<a name="default-properties-43"></a><span class="c1"># The saved result can be used to regenerate html reports.</span>
+<a name="default-properties-44"></a><span class="c1"># default: false</span>
+<a name="default-properties-45"></a><span class="n">save_execution_result</span> <span class="o">=</span> <span class="n">false</span>
+<a name="default-properties-46"></a>
+<a name="default-properties-47"></a><span class="c1"># CsvDelimiter holds delimiter used to parse csv files</span>
+<a name="default-properties-48"></a><span class="c1"># default: `,`</span>
+<a name="default-properties-49"></a><span class="n">csv_delimiter</span> <span class="o">=</span> <span class="p">,</span>
+<a name="default-properties-50"></a>
+<a name="default-properties-51"></a><span class="c1"># Gauge tries to install missing plugins during execution.</span>
+<a name="default-properties-52"></a><span class="c1"># To disable this, set the below environment variable to false.</span>
+<a name="default-properties-53"></a><span class="n">GAUGE_PLUGIN_INSTALL</span> <span class="o">=</span> <span class="n">true</span>
+<a name="default-properties-54"></a>
+<a name="default-properties-55"></a><span class="c1"># The path the gauge specifications directory.</span>
+<a name="default-properties-56"></a><span class="c1"># Takes a comma separated list of specification files/directories.</span>
+<a name="default-properties-57"></a><span class="n">gauge_specs_dir</span> <span class="o">=</span> <span class="n">specs</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="section" id="environments">
+<span id="id1"></span><h2>Environments<a class="headerlink" href="#environments" title="Permalink to this headline">¶</a></h2>
+<p>Environment specific
+<a class="reference external" href="https://en.wikipedia.org/wiki/Environment_variable">variables</a> can
+be managed using property files. The <a class="reference external" href="https://en.wikipedia.org/wiki/.properties">property
+files</a> have set of key
+value pairs which are set as environment variables during execution.</p>
+<p>Gauge allows you to create groups of property files, by defining and environment.</p>
+<p>A project can have multiple environments, and depending on the argument <cite>–env</cite> specified,
+the corresponding environment is loaded at runtime. <cite>default</cite> is the default environment,
+which is loaded when no <cite>–env</cite> is specified.</p>
+<p>The env directory structure for a <code class="docutils literal notranslate"><span class="pre">java</span></code> project:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>├── env
+  └── default
+     ├── default.properties
+     └── java.properties
+</pre></div>
+</div>
+<p>Custom properties can be added to an existing property files or in a
+newly created one.</p>
+<div class="section" id="creating-new-environment">
+<h3>Creating new environment<a class="headerlink" href="#creating-new-environment" title="Permalink to this headline">¶</a></h3>
+<p>To create an environment called <code class="docutils literal notranslate"><span class="pre">ci</span></code>:</p>
+<ul class="simple">
+<li>Create a directory called <code class="docutils literal notranslate"><span class="pre">ci</span></code> in <code class="docutils literal notranslate"><span class="pre">env</span></code> directory</li>
+<li>Add property files (e.g. <code class="docutils literal notranslate"><span class="pre">user.properties</span></code>)</li>
+</ul>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>├── env
+   ├── ci
+      |── user.properties
+   |── default
+      ├── default.properties
+      └── java.properties
+   ├── dev
+      |── user.properties
+   ├── experimental
+      |── default.properties
+      └── java.properties
+</pre></div>
+</div>
+</div>
+<div class="section" id="executing-with-environment">
+<h3>Executing with environment<a class="headerlink" href="#executing-with-environment" title="Permalink to this headline">¶</a></h3>
+<p>The environment is specified using the <code class="docutils literal notranslate"><span class="pre">env</span></code> flag. For example if
+<code class="docutils literal notranslate"><span class="pre">ci</span></code> environment is used during execution</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">gauge run --env ci specs</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="executing-with-multiple-environments">
+<h3>Executing with multiple environments<a class="headerlink" href="#executing-with-multiple-environments" title="Permalink to this headline">¶</a></h3>
+<p>Multiple environments can be specified using the <code class="docutils literal notranslate"><span class="pre">env</span></code> flag. For example if
+<code class="docutils literal notranslate"><span class="pre">ci</span></code>, <code class="docutils literal notranslate"><span class="pre">experimental</span></code> and <code class="docutils literal notranslate"><span class="pre">default</span></code> environments are used during execution</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">gauge run --env &quot;ci, experimental, default&quot; specs</span>
+</pre></div>
+</div>
+<p>Gauge loads the environment variables as below.
+-  Precedence to the env variable value is given to the order given by the user command.</p>
+<blockquote>
+<div>Hence command <cite>gauge run –env “ci, experimental, default” specs</cite> is different than
+<cite>gauge run –env “ci, default, experimental” specs</cite></div></blockquote>
+<ul class="simple">
+<li>Specifying the <code class="docutils literal notranslate"><span class="pre">default</span></code> environment is optional.
+The command <cite>gauge run –env “ci, experimental” specs</cite> will load values from the given environments.
+Only the values which are not yet set will be loaded from <code class="docutils literal notranslate"><span class="pre">default</span></code> environment.
+The default environment variables won’t overwrite variables which are already loaded.</li>
+</ul>
+</div>
+<div class="section" id="precedence-of-environments">
+<h3>Precedence of Environments<a class="headerlink" href="#precedence-of-environments" title="Permalink to this headline">¶</a></h3>
+<p>Precedence to the env variable value is given in the below order. 1.
+User shell / OS env variable values 2. Project environment passed in the
+<code class="docutils literal notranslate"><span class="pre">--env</span></code> flag 3. Project environment present in the <code class="docutils literal notranslate"><span class="pre">env/default</span></code> dir
+(if present) 3. Gauge default env variable values, as below</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="71%" />
+<col width="29%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Property</th>
+<th class="head">Value</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>gauge_reports_dir</td>
+<td>reports</td>
+</tr>
+<tr class="row-odd"><td>overwrite_reports</td>
+<td>true</td>
+</tr>
+<tr class="row-even"><td>screenshot_on_failure</td>
+<td>true</td>
+</tr>
+<tr class="row-odd"><td>logs_directory</td>
+<td>logs</td>
+</tr>
+</tbody>
+</table>
+<p>Gauge loads the environment variables as below.</p>
+<ul class="simple">
+<li>When Gauge starts, the environment(s) passed by the user in the
+<code class="docutils literal notranslate"><span class="pre">--env</span></code> flag will be loaded. If this flag is not passed by the
+user, <code class="docutils literal notranslate"><span class="pre">default</span></code> environment will be loaded.</li>
+<li>Gauge will then load the <code class="docutils literal notranslate"><span class="pre">default</span></code> environment. Only the values
+which are not yet set will be loaded. This step won’t overwrite the
+variables which are set in step 1.</li>
+<li>Finally, Gauge will load the environment variables which are not yet
+set, as per the table above.</li>
+<li>These values can be overwritten by explicitly setting the respective
+OS environment variables.</li>
+<li>If the environment mentioned in the <code class="docutils literal notranslate"><span class="pre">--env</span></code> flag is not found in
+the project, Gauge will end with a non-zero exit code.</li>
+<li>Gauge project doesn’t need to have a <code class="docutils literal notranslate"><span class="pre">default</span></code> env since Gauge will
+use the above values as default. User can still set the <code class="docutils literal notranslate"><span class="pre">default</span></code>
+env to either overwrite or add new env variables, but doesn’t want to
+pass the <code class="docutils literal notranslate"><span class="pre">--env</span></code> flag.</li>
+</ul>
+<div class="section" id="examples">
+<h4>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li>User executes <code class="docutils literal notranslate"><span class="pre">gauge</span> <span class="pre">run</span> <span class="pre">specs</span></code><ul>
+<li>If <code class="docutils literal notranslate"><span class="pre">&lt;project_root&gt;/env/default</span></code> is <strong>not</strong> present, Gauge will
+set the default env variables with values mentioned in the table
+above.</li>
+<li>If <code class="docutils literal notranslate"><span class="pre">&lt;project_root&gt;/env/default</span></code> is present, Gauge will set the
+env variables mentioned in the <code class="docutils literal notranslate"><span class="pre">default</span></code> environment. It will
+then set any env variable (which is not already set) as per the
+table above.</li>
+</ul>
+</li>
+<li>User executes <code class="docutils literal notranslate"><span class="pre">gauge</span> <span class="pre">run</span> <span class="pre">--env=java_ci</span> <span class="pre">specs</span></code><ul>
+<li>If <code class="docutils literal notranslate"><span class="pre">&lt;project_root&gt;/env/java_ci</span></code> is <strong>not</strong> present, Gauge will
+end with a non-zero exit code.</li>
+<li>If <code class="docutils literal notranslate"><span class="pre">&lt;project_root&gt;/env/java_ci</span></code> is present, Gauge will set the
+env variables mentioned in the <code class="docutils literal notranslate"><span class="pre">java_ci</span></code> environment. It will
+then load other variables from the <code class="docutils literal notranslate"><span class="pre">default</span></code> environment which
+are not already set. Finally, it will the set the env vars with
+values mentioned in the table above (if they are not already set).</li>
+</ul>
+</li>
+<li>User executes <code class="docutils literal notranslate"><span class="pre">gauge_reports_dir=newReportsDir</span> <span class="pre">gauge</span> <span class="pre">run</span> <span class="pre">specs</span></code> or user
+explicitly sets <code class="docutils literal notranslate"><span class="pre">gauge_reports_dir=newReportsDir</span></code> in shell and then
+runs <code class="docutils literal notranslate"><span class="pre">gauge</span> <span class="pre">run</span> <span class="pre">specs</span></code><ul>
+<li>Gauge will set all the default env variables from <code class="docutils literal notranslate"><span class="pre">env/default</span></code>
+directory and then from the above table, except for the variable
+<code class="docutils literal notranslate"><span class="pre">gauge_reports_dir</span></code>. This variable’s value will still continue
+to be <code class="docutils literal notranslate"><span class="pre">newReportsDir</span></code>.</li>
+</ul>
+</li>
+<li>User executes
+<code class="docutils literal notranslate"><span class="pre">gauge_reports_dir=newReportsDir</span> <span class="pre">gauge</span> <span class="pre">run</span> <span class="pre">--env=java_ci</span> <span class="pre">specs</span></code> or user
+explicitly sets <code class="docutils literal notranslate"><span class="pre">gauge_reports_dir=newReportsDir</span></code> in shell and then
+runs <code class="docutils literal notranslate"><span class="pre">gauge</span> <span class="pre">run</span> <span class="pre">--env=java_ci</span> <span class="pre">specs</span></code><ul>
+<li>Gauge will set the env variables mentioned in the <code class="docutils literal notranslate"><span class="pre">java_ci</span></code>
+environment. It will then load other variables from the
+<code class="docutils literal notranslate"><span class="pre">default</span></code> environment which are not already set. Finally, it
+will the set the env vars with values mentioned in the table above
+(if they are not already set). However variable
+<code class="docutils literal notranslate"><span class="pre">gauge_reports_dir</span></code>, which is explicitly set in the shell will
+not be overwritten. This variable’s value will still continue to
+be <code class="docutils literal notranslate"><span class="pre">newReportsDir</span></code>.</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="section" id="language-plugin">
+<span id="language-config"></span><h2>Language Plugin<a class="headerlink" href="#language-plugin" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="general">
+<h3>General<a class="headerlink" href="#general" title="Permalink to this headline">¶</a></h3>
+<p>Configuration properties set here will be available to the test
+execution as environment variables. Please see <a class="reference internal" href="#environments"><span class="std std-ref">Environments</span></a>
+for more details.</p>
+<p>Properties are defined in the following format.</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>sample_key = sample_value
+</pre></div>
+</div>
+<p>Java Specific configuration changes can be made in the
+<code class="docutils literal notranslate"><span class="pre">env/default/java.properties</span></code> file.</p>
+<div class="highlight-python notranslate" id="java-properties"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><a href="#java-properties-1"> 1</a>
+<a href="#java-properties-2"> 2</a>
+<a href="#java-properties-3"> 3</a>
+<a href="#java-properties-4"> 4</a>
+<a href="#java-properties-5"> 5</a>
+<a href="#java-properties-6"> 6</a>
+<a href="#java-properties-7"> 7</a>
+<a href="#java-properties-8"> 8</a>
+<a href="#java-properties-9"> 9</a>
+<a href="#java-properties-10">10</a>
+<a href="#java-properties-11">11</a>
+<a href="#java-properties-12">12</a>
+<a href="#java-properties-13">13</a>
+<a href="#java-properties-14">14</a>
+<a href="#java-properties-15">15</a>
+<a href="#java-properties-16">16</a>
+<a href="#java-properties-17">17</a>
+<a href="#java-properties-18">18</a></pre></div></td><td class="code"><div class="highlight"><pre><span></span><a name="java-properties-1"></a><span class="c1"># Specify an alternate Java home if you want to use a custom version.</span>
+<a name="java-properties-2"></a><span class="n">gauge_java_home</span> <span class="o">=</span> <span class="n">PATH_TO_JAVA_HOME</span>
+<a name="java-properties-3"></a>
+<a name="java-properties-4"></a><span class="c1"># Use this property if you need to override the build path for the</span>
+<a name="java-properties-5"></a><span class="c1"># project.</span>
+<a name="java-properties-6"></a><span class="c1"># Note: IntelliJ out directory will be usually auto-detected.</span>
+<a name="java-properties-7"></a><span class="n">gauge_custom_build_path</span> <span class="o">=</span> <span class="n">PATH_TO_CUSTOM_BUILDPATH</span>
+<a name="java-properties-8"></a>
+<a name="java-properties-9"></a><span class="c1"># Specify the directory where additional libraries are kept.</span>
+<a name="java-properties-10"></a><span class="c1">#   You can specify multiple directory names separated with a comma `,`</span>
+<a name="java-properties-11"></a><span class="c1">#   `libs` directory in the gauge project is added by default.</span>
+<a name="java-properties-12"></a><span class="n">gauge_additional_libs</span> <span class="o">=</span> <span class="n">libs</span><span class="o">/*</span><span class="p">,</span> <span class="n">PATH_TO_NEW_LIBRARY</span>
+<a name="java-properties-13"></a>
+<a name="java-properties-14"></a><span class="c1"># Specify the JVM arguments passed to java while launching.</span>
+<a name="java-properties-15"></a><span class="n">gauge_jvm_args</span> <span class="o">=</span> <span class="o">&lt;</span><span class="n">JVM_ARGS</span><span class="o">&gt;</span>
+<a name="java-properties-16"></a>
+<a name="java-properties-17"></a><span class="c1"># Comma separated list of dirs. path should be relative to project root.</span>
+<a name="java-properties-18"></a><span class="n">STEP_IMPL_DIR</span> <span class="o">=</span> <span class="n">tests</span>
+</pre></div>
+</td></tr></table></div>
+<p>Javascript Specific configuration changes can be made in the
+<code class="docutils literal notranslate"><span class="pre">env/default/js.properties</span></code> file.</p>
+<div class="highlight-python notranslate" id="js-properties"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><a href="#js-properties-1">1</a>
+<a href="#js-properties-2">2</a>
+<a href="#js-properties-3">3</a>
+<a href="#js-properties-4">4</a>
+<a href="#js-properties-5">5</a>
+<a href="#js-properties-6">6</a>
+<a href="#js-properties-7">7</a>
+<a href="#js-properties-8">8</a></pre></div></td><td class="code"><div class="highlight"><pre><span></span><a name="js-properties-1"></a><span class="c1"># Use this property if you need to override the timeout of step</span>
+<a name="js-properties-2"></a><span class="n">test_timeout</span> <span class="o">=</span> <span class="mi">10000</span>
+<a name="js-properties-3"></a>
+<a name="js-properties-4"></a><span class="c1"># Change this to true to enable browser debugging support</span>
+<a name="js-properties-5"></a><span class="n">DEBUG</span> <span class="o">=</span> <span class="n">false</span>
+<a name="js-properties-6"></a>
+<a name="js-properties-7"></a><span class="c1"># Comma separated list of dirs. path should be relative to project root.</span>
+<a name="js-properties-8"></a><span class="n">STEP_IMPL_DIR</span> <span class="o">=</span> <span class="n">tests</span>
+</pre></div>
+</td></tr></table></div>
+<p>Python Specific configuration changes can be made in the
+<code class="docutils literal notranslate"><span class="pre">env/default/python.properties</span></code> file.</p>
+<div class="highlight-python notranslate" id="python"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><a href="#python-1">1</a>
+<a href="#python-2">2</a>
+<a href="#python-3">3</a>
+<a href="#python-4">4</a>
+<a href="#python-5">5</a></pre></div></td><td class="code"><div class="highlight"><pre><span></span><a name="python-1"></a><span class="c1"># Override this if you want to use a different command</span>
+<a name="python-2"></a><span class="n">GAUGE_PYTHON_COMMAND</span> <span class="o">=</span> <span class="n">python</span>
+<a name="python-3"></a>
+<a name="python-4"></a><span class="c1"># Comma separated list of dirs. path should be relative to project root.</span>
+<a name="python-5"></a><span class="n">STEP_IMPL_DIR</span> <span class="o">=</span> <span class="n">tests</span>
+</pre></div>
+</td></tr></table></div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">CSharp and Ruby language runners do not hold any configuration beyond what is listed in <a class="reference internal" href="#default-properties"><span class="std std-ref">default properties</span></a>.</p>
+</div>
+</div>
+</div>
+<div class="section" id="http-proxy">
+<h2>HTTP Proxy<a class="headerlink" href="#http-proxy" title="Permalink to this headline">¶</a></h2>
+<p>Gauge connects to internet for downloading plugins, templates, etc. If
+you are behind a proxy, you will have to configure the proxy settings so
+that Gauge connects to internet via the proxy server.</p>
+<div class="section" id="without-authentication">
+<h3>Without Authentication<a class="headerlink" href="#without-authentication" title="Permalink to this headline">¶</a></h3>
+<p>If authentication is not required, set the environment variable
+<code class="docutils literal notranslate"><span class="pre">HTTP_PROXY</span></code> to proxy server URL.</p>
+<div class="tabs http-proxy docutils container">
+<div class="tab docutils container" id="tab-macos">
+<p class="tab-title">macOS</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">export HTTP_PROXY=http://10.0.2.2:5678</span>
+</pre></div>
+</div>
+</div>
+<div class="tab docutils container" id="tab-windows">
+<p class="tab-title">windows</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">set HTTP_PROXY=http://10.0.2.2:5678</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="with-authentication">
+<h3>With Authentication<a class="headerlink" href="#with-authentication" title="Permalink to this headline">¶</a></h3>
+<p>If authentication is required, set the environment variable
+<code class="docutils literal notranslate"><span class="pre">HTTP_PROXY</span></code> to proxy server URL along with the credentials.</p>
+<div class="tabs http-proxy docutils container">
+<div class="tab docutils container" id="tab-macos">
+<p class="tab-title">macOS</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">export HTTP_PROXY=http://username:password@10.0.2.2:5678</span>
+</pre></div>
+</div>
+</div>
+<div class="tab docutils container" id="tab-windows">
+<p class="tab-title">windows</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">set HTTP_PROXY=http://username:password@10.0.2.2:5678</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="build-tools">
+<h2>Build tools<a class="headerlink" href="#build-tools" title="Permalink to this headline">¶</a></h2>
+<span id="gradle"></span><span id="maven"></span><ol class="arabic" id="ant-task">
+<li><p class="first">To use Gauge with <a class="reference external" href="https://maven.apache.org/">Maven</a>, refer to <a class="reference external" href="https://github.com/getgauge/gauge-maven-plugin/blob/master/README.md">Gauge Maven Plugin</a></p>
+</li>
+<li><p class="first">To use Gauge with <a class="reference external" href="https://gradle.org/">Gradle</a>, refer to <a class="reference external" href="https://github.com/getgauge/gauge-gradle-plugin/blob/master/Readme.md">Gauge Gradle Plugin</a></p>
+</li>
+<li><p class="first">To invoke gauge specs using <a class="reference external" href="https://ant.apache.org/manual/Tasks/ant.html">Ant</a></p>
+<blockquote>
+<div><div class="literal-block-wrapper docutils container" id="id2">
+<div class="code-block-caption"><span class="caption-text">Add the below configuration in your <code class="docutils literal notranslate"><span class="pre">build.xml</span></code></span><a class="headerlink" href="#id2" title="Permalink to this code">¶</a></div>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;target</span> <span class="na">name=</span><span class="s">&quot;specs&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;exec</span> <span class="na">executable=</span><span class="s">&quot;gauge&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;arg</span> <span class="na">value=</span><span class="s">&quot;specs&quot;</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;/exec&gt;</span>
+<span class="nt">&lt;/target&gt;</span>
+</pre></div>
+</div>
+</div>
+</div></blockquote>
+</li>
+</ol>
+</div>
+</div>
+
+
+    </div>
+    
+
+     
+      
+        <div class="col-md-3" id="sideBar">
+          <nav id="rightNav">
+            <div class="text-center">
+              <input type="text" id="search" name="search" placeholder="Search Docs"/>
+            </div>
+            <div class="sidebar-wrapper">
+              <ul class="localtoc">
+                <ul>
+<li><a class="reference internal" href="#">Configuration</a><ul>
+<li><a class="reference internal" href="#global">Global</a></li>
+<li><a class="reference internal" href="#local-project-level">Local (Project level)</a></li>
+<li><a class="reference internal" href="#environments">Environments</a><ul>
+<li><a class="reference internal" href="#creating-new-environment">Creating new environment</a></li>
+<li><a class="reference internal" href="#executing-with-environment">Executing with environment</a></li>
+<li><a class="reference internal" href="#executing-with-multiple-environments">Executing with multiple environments</a></li>
+<li><a class="reference internal" href="#precedence-of-environments">Precedence of Environments</a><ul>
+<li><a class="reference internal" href="#examples">Examples</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#language-plugin">Language Plugin</a><ul>
+<li><a class="reference internal" href="#general">General</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#http-proxy">HTTP Proxy</a><ul>
+<li><a class="reference internal" href="#without-authentication">Without Authentication</a></li>
+<li><a class="reference internal" href="#with-authentication">With Authentication</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#build-tools">Build tools</a></li>
+</ul>
+</li>
+</ul>
+
+              </ul>
+            </div>
+          </nav>
+        </div>
+      
+    
+  </div>
+</div>
+<footer>
+  <div class="footer container">
+    <div class="footer_items product">
+      <h5>Product</h5>
+      <nav class="footer_links">
+        <ul class="foolinks">
+          <li> <a href="//gauge.org/get_started/">Get started</a> </li>
+          <li> <a href="//gauge.org/#features">Features</a> </li>
+          <li> <a href="//gauge.org/plugins/">Plugins</a> </li>
+          <li> <a href="/">Documentation</a> </li>
+          <li> <a href="//gauge.org/blog/">Blog</a></li> 
+          <li> <a href="//brandfolder.com/twproducts"   target="_blank">Press Kit</a></li> 
+                      
+        </ul>
+      </nav>
+    </div>
+    <div class="footer_items explore">
+      <h5>Explore</h5>
+      <nav class="footer_links">
+        <ul class="foolinks">
+          <li> <a href="browse.html">Table of Contents</a> </li>
+          <li> <a href="//waffle.io/getgauge/gauge"   target="_blank">Roadmap</a> </li>
+          <li> <a href="//manpage.gauge.org/"   target="_blank">Gauge Commands</a> </li>
+          <li><a href="//thoughtworks.com/privacy-policy" target="_blank">Privacy</a></li>
+        </ul>
+      </nav>
+    </div>      
+    <div class="footer_items engage">
+      <h5>Engage</h5>
+      <nav class="footer_links">
+        <ul class="foolinks">
+          <li> <a href="//gitter.im/getgauge/chat" class="icon_gitter">Gitter</a> </li> 
+          <li> <a href="//groups.google.com/forum/#!forum/getgauge"  class="icon_google">Google Group</a> </li>
+          <li> <a href="//stackoverflow.com/questions/tagged/getgauge"   class="icon_stack">Stack Overflow</a> </li>
+          <li> <a href="//github.com/getgauge/gauge/blob/master/CONTRIBUTING.md"  class="icon_contribute" >Contribute</a> </li>                  
+        </ul>
+      </nav>
+    </div>
+    <div class="footer_items follow">
+      <h5>Follow us</h5>
+      <nav class="footer_links">
+        <ul class="foolinks">
+          <li> <a href="//github.com/getgauge/gauge"  target="_blank"><i class="fab fa-github"></i></a> <a href="//twitter.com/getgauge"  target="_blank"><i class="fab fa-twitter"></i></a></li> 
+          </ul>
+        </nav>
+        <div class="licence">
+        <p>Gauge is an open-source project, sponsored by <a href="//www.thoughtworks.com/"  target="_blank">ThoughtWorks Inc.</a> under the GPL License, Version 3.0</p>
+        </div>
+    </div>
+  </div>
+<script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+  <script type="text/javascript" src="_static/jquery.js"></script>
+  <script type="text/javascript" src="_static/underscore.js"></script>
+  <script type="text/javascript" src="_static/doctools.js"></script>
+  <script type="text/javascript" src="_static/language_data.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+  <script type="text/javascript" src="//gauge.org/assets/javascripts/site.js"></script>
+  <script type="text/javascript" src="_static/js/theme.js"></script>
+</footer>
+</body>
+</html>

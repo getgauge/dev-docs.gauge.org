@@ -1,0 +1,498 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5C33ML2');</script>
+<!-- End Google Tag Manager -->
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Gauge Documentation &#8212; Gauge 1.0.5 documentation</title>
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="shortcut icon" href="_static/favicon.ico"/>
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="google-site-verification" content="yyEnHwGHUHTDtrSJG0WSBleL2wP7e1XfyuJsgRGasyk" />
+
+</head><body>
+  <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5C33ML2"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+  
+  <!-- <function StandaloneHTMLBuilder.handle_page.<locals>.<lambda> at 0x106e36268> -->
+<header class="top">
+  <div class="header-container">
+    <a href="//gauge.org" class="logo">Gauge</a>
+    <nav class="nav">
+      <ul class="main-nav">
+        <li class="githubstar-box">
+          <a href="//github.com/getgauge/gauge" target="_blank">
+            <span  class="github-icon"></span>
+            <span class="github_star"></span></a>
+        </li>
+        <li class="link_home"><a href="//gauge.org">Home</a></li>
+        <li class="link_plugins"><a href="//gauge.org/plugins">Plugins</a></li>
+        <li class="link_doc"><a href="/">Documentation</a></li>
+        <li class="link_blog"><a href="//gauge.org/blog">Blog</a></li>
+        <li class="link_getstarted"><a href="//gauge.org/get_started">Get Started</a></li>
+      </ul>
+    </nav>
+    <div class="navbtn">
+      <div class="bar"></div>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+  <div class="row col-md-12 bigContainer">
+    
+    <div class="col-md-9 content">
+      
+      <div class="breadcrumbs-container" role="navigation" aria-label="breadcrumbs navigation">
+    <ul class="breadcrumbs">
+      
+        <li><a href="index.html">Documentation</a> &raquo;</li>
+          
+        <li>Gauge Documentation</li>
+      
+    </ul>
+    
+        <span class="breadcrumbs-aside">
+          
+            <a class="edit-on-github" href="https://github.com/getgauge/docs.gauge.org/blob/1.0.5/browse.rst">Edit this Page</a> 
+          
+        </span>
+      
+  </div>
+      <a href="javascript:" id="return-to-top"><i></i></a>
+      
+  <div class="section" id="gauge-documentation">
+<h1>Gauge Documentation<a class="headerlink" href="#gauge-documentation" title="Permalink to this headline">¶</a></h1>
+<p>Gauge is a light-weight cross-platform test automation tool with the ability to author test cases in the business language.</p>
+<div class="index-page docutils container">
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#install-gauge-for-your-os">Install Gauge for your OS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#alternate-installation-methods">Alternate Installation Methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#project-templates">Project Templates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#uninstall-gauge">Uninstall Gauge</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html#plugins">Plugins</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#types-of-plugins">Types of Plugins</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="installation.html#ide-plugins">IDE Plugins</a></li>
+<li class="toctree-l3"><a class="reference internal" href="installation.html#language-plugins">Language Plugins</a></li>
+<li class="toctree-l3"><a class="reference internal" href="installation.html#reporting-plugins">Reporting Plugins</a></li>
+<li class="toctree-l3"><a class="reference internal" href="installation.html#other-plugins">Other Plugins</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#plugin-installation">Plugin Installation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="installation.html#install-a-specific-plugin-version">Install a specific Plugin version</a></li>
+<li class="toctree-l3"><a class="reference internal" href="installation.html#add-plugins-to-a-project">Add Plugins to a Project</a></li>
+<li class="toctree-l3"><a class="reference internal" href="installation.html#offline-installation-of-plugins">Offline Installation of Plugins</a></li>
+<li class="toctree-l3"><a class="reference internal" href="installation.html#updating-plugins">Updating Plugins</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#uninstall-plugins">Uninstall Plugins</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html#troubleshooting">Troubleshooting</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#gauge-installation">Gauge Installation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="installation.html#installing-with-npm">Installing with npm</a></li>
+<li class="toctree-l3"><a class="reference internal" href="installation.html#installing-with-homebrew">Installing with Homebrew</a></li>
+<li class="toctree-l3"><a class="reference internal" href="installation.html#windows">Windows</a></li>
+<li class="toctree-l3"><a class="reference internal" href="installation.html#mac-os-x">Mac OS X</a></li>
+<li class="toctree-l3"><a class="reference internal" href="installation.html#linux">Linux</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#troubleshoot-plugin-installation">Plugin installation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="installation.html#plugins-directory">Plugins directory</a></li>
+<li class="toctree-l3"><a class="reference internal" href="installation.html#custom-plugin-install-location">Custom Plugin Install location</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#logs">Logs</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="writing-specifications.html">Writing Specifications</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="writing-specifications.html#specifications-spec">Specifications (spec)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="writing-specifications.html#example">Example</a></li>
+<li class="toctree-l3"><a class="reference internal" href="writing-specifications.html#specification-heading">Specification Heading</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="writing-specifications.html#scenario">Scenario</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="writing-specifications.html#id1">Example</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="writing-specifications.html#step">Step</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="writing-specifications.html#step-syntax">Example</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="writing-specifications.html#parameters">Parameters</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="writing-specifications.html#simple-parameters">1. Simple parameters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="writing-specifications.html#dynamic-parameters">2. Dynamic Parameters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="writing-specifications.html#table-parameters">3. Table Parameters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="writing-specifications.html#special-parameters">4. Special Parameters</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="writing-specifications.html#special-parameter-file">Special Parameter: File</a></li>
+<li class="toctree-l4"><a class="reference internal" href="writing-specifications.html#special-parameter-csv">Special Parameter: CSV</a></li>
+<li class="toctree-l4"><a class="reference internal" href="writing-specifications.html#data-table-values-in-inline-tables">Data Table values in inline tables</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="writing-specifications.html#example-inline-data-driven-table">Example</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="writing-specifications.html#tags">Tags</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="writing-specifications.html#example-tag-s">Example: Tag(s)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="writing-specifications.html#example-multi-line-tag-s">Example: Multi-line tag(s)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="writing-specifications.html#concepts">Concepts</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="writing-specifications.html#defining-a-concept">Defining a concept</a></li>
+<li class="toctree-l3"><a class="reference internal" href="writing-specifications.html#concept-header">Concept header</a></li>
+<li class="toctree-l3"><a class="reference internal" href="writing-specifications.html#concept-steps">Concept Steps</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="writing-specifications.html#contexts">Contexts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="writing-specifications.html#tear-down-steps">Tear Down Steps</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="writing-specifications.html#syntax">Syntax</a></li>
+<li class="toctree-l3"><a class="reference internal" href="writing-specifications.html#id8">Example</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="writing-specifications.html#step-implementations">Step implementations</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="writing-specifications.html#simple-step">Simple step</a></li>
+<li class="toctree-l3"><a class="reference internal" href="writing-specifications.html#step-with-table">Step with table</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="writing-specifications.html#step-alias">Step alias</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="writing-specifications.html#use-case">Use case</a></li>
+<li class="toctree-l5"><a class="reference internal" href="writing-specifications.html#example-1">Example 1</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="writing-specifications.html#implementation">Implementation</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="writing-specifications.html#example-2">Example 2</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="writing-specifications.html#id9">Implementation</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="writing-specifications.html#enum-as-step-parameter">Enum as Step parameter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="writing-specifications.html#project-structure">Project Structure</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="writing-specifications.html#common-gauge-files">Common Gauge files</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="writing-specifications.html#env-directory">Env Directory</a></li>
+<li class="toctree-l4"><a class="reference internal" href="writing-specifications.html#specs-directory">Specs Directory</a></li>
+<li class="toctree-l4"><a class="reference internal" href="writing-specifications.html#manifest-file">Manifest file</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="writing-specifications.html#project-files">Project files</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="writing-specifications.html#advanced">Advanced</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="writing-specifications.html#execution-hooks">Execution hooks</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="writing-specifications.html#current-execution-context-in-the-hook">Current Execution Context in the Hook</a></li>
+<li class="toctree-l3"><a class="reference internal" href="writing-specifications.html#filtering-hooks-execution-based-on-tags">Filtering Hooks execution based on tags</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="writing-specifications.html#data-store">Data Store</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="writing-specifications.html#scenariostore">ScenarioStore</a></li>
+<li class="toctree-l3"><a class="reference internal" href="writing-specifications.html#specstore">SpecStore</a></li>
+<li class="toctree-l3"><a class="reference internal" href="writing-specifications.html#suitestore">SuiteStore</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="writing-specifications.html#taking-custom-screenshots">Taking Custom Screenshots</a></li>
+<li class="toctree-l2"><a class="reference internal" href="writing-specifications.html#custom-messages-in-reports">Custom messages in reports</a></li>
+<li class="toctree-l2"><a class="reference internal" href="writing-specifications.html#custom-screenshots-in-reports">Custom screenshots in reports</a></li>
+<li class="toctree-l2"><a class="reference internal" href="writing-specifications.html#continue-on-failure">Continue on Failure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="writing-specifications.html#refactoring">Refactoring</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="writing-specifications.html#rephrase-steps">Rephrase steps</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="writing-specifications.html#troubleshooting">Troubleshooting</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="writing-specifications.html#errors">Errors</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="errors/gauge-vs-001.html">GAUGE-VS-001 : Gauge API Not Started</a></li>
+<li class="toctree-l3"><a class="reference internal" href="errors/gauge-vs-002.html">GAUGE-VS-002 : Incompatible Gauge Version installed.</a></li>
+<li class="toctree-l3"><a class="reference internal" href="errors/gauge-vs-003.html">GAUGE-VS-003 : Unable to read Gauge version</a></li>
+<li class="toctree-l3"><a class="reference internal" href="errors/gauge-intelliJ-001.html">GAUGE-IntelliJ-001 : Gauge API Not Started</a></li>
+<li class="toctree-l3"><a class="reference internal" href="errors/gauge-intelliJ-002.html">GAUGE-IntelliJ-002 : Error adding module to project</a></li>
+<li class="toctree-l3"><a class="reference internal" href="errors/gauge-intelliJ-003.html">GAUGE-IntelliJ-003 : Steps marked as unimplemented</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="errors/gauge-intelliJ-003.html#check-dependencies">Check dependencies</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="errors/gauge-intelliJ-003.html#for-a-gauge-maven-project">For a gauge maven project</a></li>
+<li class="toctree-l5"><a class="reference internal" href="errors/gauge-intelliJ-003.html#for-a-simple-gauge-java-project">For a simple gauge java project</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="errors/gauge-intelliJ-004.html">GAUGE-IntelliJ-004 : Project Build failing with compilation error but the Java Files do not mark any errors.</a></li>
+<li class="toctree-l3"><a class="reference internal" href="errors/gauge-vscode-001.html">GAUGE-VSCode-001 : Language client is not ready yet</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="experimental-feature.html">Experimental Features</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="experimental-feature.html#run-specs-before-parallel-execution">Run specs before parallel execution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="experimental-feature.html#table-driven-scenario">Table driven scenario</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="execution.html">Execution</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="execution.html#specify-directory">Specify Directory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="execution.html#specify-files">Specify files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="execution.html#specify-scenarios">Specify Scenarios</a></li>
+<li class="toctree-l2"><a class="reference internal" href="execution.html#verbose-reporting">Verbose reporting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="execution.html#data-driven-execution">Data driven execution</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="execution.html#external-csv-for-data-table">External CSV for data table</a></li>
+<li class="toctree-l3"><a class="reference internal" href="execution.html#execute-selected-data-table-rows">Execute selected data table rows</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="execution.html#specify-tags">Specify Tags</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="execution.html#tag-expressions">Tag expressions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="execution.html#parallel-execution">Parallel Execution</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="execution.html#parallel-execution-using-threads">Parallel Execution using threads</a></li>
+<li class="toctree-l3"><a class="reference internal" href="execution.html#executing-a-group-of-specification">Executing a group of specification</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="execution.html#rerun-one-execution-stream">Rerun one execution stream</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="execution.html#run-your-test-suite-with-lazy-assignment-of-tests">Run your test suite with lazy assignment of tests</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="execution.html#re-run-failed-tests">Re-run failed tests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="execution.html#re-run-flaky-tests-with-max-retry">Re-run flaky tests with max retry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="execution.html#errors-during-execution">Errors during execution</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="execution.html#parse-errors">Parse errors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="execution.html#validation-errors">Validation Errors</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="execution.html#troubleshooting">Troubleshooting</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="execution.html#id3">Validation Errors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="execution.html#compatibility-errors">Compatibility errors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="execution.html#execution-errors">Execution Errors</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="configuration.html">Configuration</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="configuration.html#global">Global</a></li>
+<li class="toctree-l2"><a class="reference internal" href="configuration.html#local-project-level">Local (Project level)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="configuration.html#environments">Environments</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="configuration.html#creating-new-environment">Creating new environment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="configuration.html#executing-with-environment">Executing with environment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="configuration.html#executing-with-multiple-environments">Executing with multiple environments</a></li>
+<li class="toctree-l3"><a class="reference internal" href="configuration.html#precedence-of-environments">Precedence of Environments</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="configuration.html#examples">Examples</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="configuration.html#language-plugin">Language Plugin</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="configuration.html#general">General</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="configuration.html#http-proxy">HTTP Proxy</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="configuration.html#without-authentication">Without Authentication</a></li>
+<li class="toctree-l3"><a class="reference internal" href="configuration.html#with-authentication">With Authentication</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="configuration.html#build-tools">Build tools</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="faqs.html">FAQs</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="faqs.html#installation">Installation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="faqs.html#where-s-the-gauge-executable-installed-by-default">Where’s the gauge executable installed by default?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="faqs.html#where-are-the-plugins-installed">Where are the plugins installed?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="faqs.html#what-is-gauge-home">What is GAUGE_HOME?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="faqs.html#how-can-i-manually-install-a-plugin">How can I manually install a plugin?</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="faqs.html#execution">Execution</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="faqs.html#why-do-i-get-validation-failure-warning">Why do I get validation failure warning?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="faqs.html#why-does-the-runner-fail-to-start">Why does the runner fail to start?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="faqs.html#why-are-there-too-many-open-files">Why are there too many open files?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="faqs.html#why-can-t-gradle-execute-gauge-specs-despite-adding-a-task-as-per-the-document">Why can’t gradle execute gauge specs, despite adding a task as per the document?</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="faqs.html#configuration">Configuration</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="faqs.html#how-can-i-increase-the-language-runner-timeout">How can I increase the language runner timeout?</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="faqs.html#logs">Logs</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="faqs.html#where-does-gauge-log-the-test-execution-output-warnings-validation-results-etc">Where does gauge log the test execution output. warnings, validation results etc?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="faqs.html#where-can-i-find-gauge-api-logs-for-debugging-ide-plugins">Where can I find gauge API logs for debugging IDE plugins?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="faqs.html#how-can-i-customize-the-log-directory-location">How can I customize the log directory location?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="faqs.html#where-does-gauge-non-project-specific-logs-like-plugin-installation-etc">Where does gauge non project specific logs like plugin installation etc.?</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="faqs.html#gauge-javascript">Gauge Javascript</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="faqs.html#how-to-debug-without-ide">How to debug without IDE</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="faqs.html#requirements">Requirements</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="faqs.html#how-it-works">How it works</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="faqs.html#caveats">Caveats</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="faqs.html#grpc-issues">gRPC issues</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="faqs.html#gauge-python">Gauge Python</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="faqs.html#importerror-no-module-named-getgauge">ImportError: No module named getgauge</a></li>
+<li class="toctree-l3"><a class="reference internal" href="faqs.html#failed-to-start-gauge-api-plugin-python-not-installed-on-following-locations-path">Failed to start gauge API: Plugin ‘python’ not installed on following locations : [PATH]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="faqs.html#importerror-no-module-named-step-impl-file-name">ImportError: No module named step_impl.&lt;file_name&gt;</a></li>
+<li class="toctree-l3"><a class="reference internal" href="faqs.html#how-to-change-rename-default-step-implementation-step-impl-directory">How to change/rename default step implementation(<code class="docutils literal notranslate"><span class="pre">step_impl</span></code>) directory</a></li>
+<li class="toctree-l3"><a class="reference internal" href="faqs.html#how-to-use-different-version-of-python-while-running-specs">How to use different version of python while running specs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="faqs.html#how-to-debug-gauge-python-without-using-an-ide">How to debug gauge-python without using an IDE</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="faqs.html#vscode">VSCode</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="faqs.html#why-are-some-features-not-working">Why are some features not working?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="faqs.html#why-does-the-debugger-not-stop-at-the-right-breakpoint-gauge-java">Why does the debugger not stop at the right breakpoint (gauge-java)?</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="examples.html">Examples</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="examples.html#java">Java</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examples.html#ruby">Ruby</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examples.html#c">C#</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examples.html#javascript">Javascript</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examples.html#python">Python</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="howto/index.html">Tutorials</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="howto/ci_cd/index.html">Tutorials: Integrating Gauge with CI/CD tools</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="howto/ci_cd/gocd.html">GoCD</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="howto/ci_cd/gocd.html#setup">Setup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="howto/ci_cd/gocd.html#tips-on-installation">Tips on Installation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="howto/ci_cd/gocd.html#create-execution-task">Create execution task</a></li>
+<li class="toctree-l4"><a class="reference internal" href="howto/ci_cd/gocd.html#reports">Reports</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="howto/ci_cd/teamcity.html">TeamCity</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="howto/ci_cd/teamcity.html#tips-on-installation">Tips on Installation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="howto/ci_cd/teamcity.html#create-execution-task">Create execution task</a></li>
+<li class="toctree-l4"><a class="reference internal" href="howto/ci_cd/teamcity.html#reports">Reports</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="howto/ci_cd/travis.html">Travis-CI</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="howto/ci_cd/travis.html#creating-tasks">Creating tasks</a></li>
+<li class="toctree-l4"><a class="reference internal" href="howto/ci_cd/travis.html#reports">Reports</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="howto/ci_cd/circle.html">CircleCI</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="howto/ci_cd/circle.html#running-tests-and-publishing-reports">Running tests and publishing reports</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="howto/ci_cd/jenkins.html">Jenkins</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="howto/ci_cd/jenkins.html#setup">Setup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="howto/ci_cd/jenkins.html#tips-on-installation">Tips on Installation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="howto/ci_cd/jenkins.html#create-execution-task">Create execution task</a></li>
+<li class="toctree-l4"><a class="reference internal" href="howto/ci_cd/jenkins.html#reports">Reports</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="howto/docker.html">Run Gauge tests on Docker</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="howto/docker.html#prerequisites">Prerequisites</a></li>
+<li class="toctree-l3"><a class="reference internal" href="howto/docker.html#docker-image-for-gauge">Docker image for Gauge</a></li>
+<li class="toctree-l3"><a class="reference internal" href="howto/docker.html#run-gauge-specs-on-docker">Run Gauge specs on Docker</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+    </div>
+    
+
+     
+      
+    
+  </div>
+</div>
+<footer>
+  <div class="footer container">
+    <div class="footer_items product">
+      <h5>Product</h5>
+      <nav class="footer_links">
+        <ul class="foolinks">
+          <li> <a href="//gauge.org/get_started/">Get started</a> </li>
+          <li> <a href="//gauge.org/#features">Features</a> </li>
+          <li> <a href="//gauge.org/plugins/">Plugins</a> </li>
+          <li> <a href="/">Documentation</a> </li>
+          <li> <a href="//gauge.org/blog/">Blog</a></li> 
+          <li> <a href="//brandfolder.com/twproducts"   target="_blank">Press Kit</a></li> 
+                      
+        </ul>
+      </nav>
+    </div>
+    <div class="footer_items explore">
+      <h5>Explore</h5>
+      <nav class="footer_links">
+        <ul class="foolinks">
+          <li> <a href="browse.html">Table of Contents</a> </li>
+          <li> <a href="//waffle.io/getgauge/gauge"   target="_blank">Roadmap</a> </li>
+          <li> <a href="//manpage.gauge.org/"   target="_blank">Gauge Commands</a> </li>
+          <li><a href="//thoughtworks.com/privacy-policy" target="_blank">Privacy</a></li>
+        </ul>
+      </nav>
+    </div>      
+    <div class="footer_items engage">
+      <h5>Engage</h5>
+      <nav class="footer_links">
+        <ul class="foolinks">
+          <li> <a href="//gitter.im/getgauge/chat" class="icon_gitter">Gitter</a> </li> 
+          <li> <a href="//groups.google.com/forum/#!forum/getgauge"  class="icon_google">Google Group</a> </li>
+          <li> <a href="//stackoverflow.com/questions/tagged/getgauge"   class="icon_stack">Stack Overflow</a> </li>
+          <li> <a href="//github.com/getgauge/gauge/blob/master/CONTRIBUTING.md"  class="icon_contribute" >Contribute</a> </li>                  
+        </ul>
+      </nav>
+    </div>
+    <div class="footer_items follow">
+      <h5>Follow us</h5>
+      <nav class="footer_links">
+        <ul class="foolinks">
+          <li> <a href="//github.com/getgauge/gauge"  target="_blank"><i class="fab fa-github"></i></a> <a href="//twitter.com/getgauge"  target="_blank"><i class="fab fa-twitter"></i></a></li> 
+          </ul>
+        </nav>
+        <div class="licence">
+        <p>Gauge is an open-source project, sponsored by <a href="//www.thoughtworks.com/"  target="_blank">ThoughtWorks Inc.</a> under the GPL License, Version 3.0</p>
+        </div>
+    </div>
+  </div>
+<script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+  <script type="text/javascript" src="_static/jquery.js"></script>
+  <script type="text/javascript" src="_static/underscore.js"></script>
+  <script type="text/javascript" src="_static/doctools.js"></script>
+  <script type="text/javascript" src="_static/language_data.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+  <script type="text/javascript" src="//gauge.org/assets/javascripts/site.js"></script>
+  <script type="text/javascript" src="_static/js/theme.js"></script>
+</footer>
+</body>
+</html>

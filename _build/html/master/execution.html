@@ -1,0 +1,1206 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+
+
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+
+<head>
+  <!-- Google Tag Manager -->
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-5C33ML2');</script>
+  <!-- End Google Tag Manager -->
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Gauge Documentation &#8212; Gauge master documentation</title>
+<link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+<link rel="stylesheet" href="_static/css/change_filter.css" type="text/css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" type="text/css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" />
+<link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="shortcut icon" href="_static/favicon.ico" />
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="google-site-verification" content="yyEnHwGHUHTDtrSJG0WSBleL2wP7e1XfyuJsgRGasyk" />
+  
+</head>
+
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5C33ML2" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  
+  <!-- <function StandaloneHTMLBuilder.handle_page.<locals>.<lambda> at 0x1096c28c8> -->
+  <header class="top">
+    <div class="header-container">
+      <a href="//preview.gauge.org" class="logo">Gauge</a>
+      <nav class="nav">
+        <ul class="main-nav">
+          <li class="githubstar-box">
+            <a href="//github.com/getgauge/gauge" target="_blank">
+              <span class="github-icon"></span>
+              <span class="github_star"></span></a>
+          </li>
+          <li class="link_home"><a href="//preview.gauge.org">Home</a></li>
+          <li class="link_plugins"><a href="//preview.gauge.org/plugins">Plugins</a></li>
+          <li class="link_doc"><a href="/">Documentation</a></li>
+          <li class="link_examples"><a href="//preview.gauge.org/blog">Blog</a></li> <!-- Update the href -->
+          <li class="link_faq"><a href="/master/getting_started/installing-gauge.html">Get Started</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- <div class="wrapper-container"> -->
+    <!-- <div class="main-content"> -->
+
+      <!--Left Sidebar  -->
+
+      <div id="sidebar" class="left-sidebar-container containers">
+        <div class='side-nav-header'>
+          <div class="navbtn">
+            <div class="bar"></div>
+          </div>
+          <div class="search-container">
+            <span id="search-icon"></span>
+            <input type="text" id="search" name="search" placeholder="Search" />
+          </div>
+        </div>
+        <nav>
+          <div class="sliding-docs-toc docs-toc">
+            <ul class="">
+              <li class="link_home"><a href="//preview.gauge.org">Home</a></li>
+              <li class="link_plugins"><a href="//preview.gauge.org/plugins">Plugins</a></li>
+              <li class="doc-toc-group collapsed"><a>Documentation</a>
+                <ul class="sub-toc collapsed" >
+                    <li><a href="/master/index.html" class="toc-link">DOCS HOME</a> </li>
+                    <li><a href="/master/overview.html" class="toc-link">OVERVIEW</a> </li>
+                    <li class="doc-toc-group collapsed"><a >GETTING STARTED</a>
+                      <ul class="sub-toc collapsed">
+                        <li><a href="/master/getting_started/installing-gauge.html" class="toc-link">Installing Gauge</a>
+                        </li>
+                        <li><a href="/master/getting_started/create-test-project.html" class="toc-link">Create a test
+                            Project</a> </li>
+                        <li><a href="/master/getting_started/running-a-specification.html" class="toc-link">Running a
+                            Specification</a> </li>
+                        <li><a href="/master/getting_started/view-a-report.html" class="toc-link">Viewing Report</a> </li>
+                      </ul>
+                    </li>
+  
+                    <li><a href="/master/writing-specifications.html" class="toc-link">WRITE
+                        SPECIFICATIONS</a> </li>
+                    <li><a href="/master/execution.html" class="toc-link">RUN SPECIFICATIONS</a> </li>
+                    <li><a href="//manpage.gauge.org" class="toc-link">COMMAND REFRERENCE</a> </li>
+                    <li><a href="/master/configuration.html" class="toc-link">CONFIGURATION</a> </li>
+                    <li><a href="/master/examples-and-tutorials.html" class="toc-link">EXAMPLES AND
+                        RECIPIES</a> </li>
+                    <li><a href="/master" class="toc-link">FAQ</a> </li>
+                    <li><a href="//taiko.gauge.org/#integrating-gauge" class="toc-link">GAUGE WITH TAIKO</a> </li>
+                  </ul>
+              </li>
+              <li class="link_examples"><a href="//preview.gauge.org/blog">Blog</a></li>
+            </ul>
+          </div>
+          <div class="fixed-docs-toc docs-toc">
+            <ul>
+              <li><a href="/master/index.html" class="toc-link">DOCS HOME</a> </li>
+              <li><a href="/master/overview.html" class="toc-link">OVERVIEW</a> </li>
+              <li class="doc-toc-group collapsed"><a href="#">GETTING STARTED</a>
+                <ul class="sub-toc collapsed">
+                  <li><a href="/master/getting_started/installing-gauge.html" class="toc-link">Installing Gauge</a>
+                  </li>
+                  <li><a href="/master/getting_started/create-test-project.html" class="toc-link">Create a test
+                      Project</a> </li>
+                  <li><a href="/master/getting_started/running-a-specification.html" class="toc-link">Running a
+                      Specification</a> </li>
+                  <li><a href="/master/getting_started/view-a-report.html" class="toc-link">Viewing Report</a> </li>
+                </ul>
+              </li>
+
+                <li><a href="/master/writing-specifications.html" class="toc-link">WRITE
+                    SPECIFICATIONS</a> </li>
+                <li><a href="/master/execution.html" class="toc-link">RUN SPECIFICATIONS</a> </li>
+                <li><a href="/master/plugin.html" class="toc-link">PLUGINS</a> </li>
+                <li><a href="//manpage.gauge.org" class="toc-link">COMMAND REFRERENCE  <i class="fa fa-external-link" aria-hidden="true"></i></a> </li>
+                <li><a href="/master/configuration.html" class="toc-link">CONFIGURATION</a> </li>
+                <li><a href="/master/examples-and-tutorials.html" class="toc-link">EXAMPLES AND
+                    RECIPIES</a> </li>
+                <li><a href="/master/faqs.html" class="toc-link">FAQ</a> </li>
+                <li><a href="//taiko.gauge.org/#integrating-gauge" class="toc-link">GAUGE WITH TAIKO  <i class="fa fa-external-link" aria-hidden="true"></i></a> </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+
+
+
+
+      <!-- Content Holder -->
+      <div class="docs-container containers">
+        <!-- <div class="row col-md-12 bigContainer"> -->
+
+        
+        <div class="edit-page">
+          <a href="https://github.com/getgauge/docs.gauge.org/edit/master/execution.rst">
+            <i class="fab fa-github"></i>
+            <u>improve this page</u> </a>
+        </div>
+        <!-- <div class="breadcrumbs-container" role="navigation" aria-label="breadcrumbs navigation">
+    <ul class="breadcrumbs">
+      
+        <li><a href="index.html">Documentation</a> &raquo;</li>
+          
+        <li>Gauge Documentation</li>
+      
+    </ul>
+    
+        <span class="breadcrumbs-aside">
+          
+            <a class="edit-on-github" href="https://github.com/getgauge/docs.gauge.org/blob/master/execution.rst">Edit this Page</a> 
+          
+        </span>
+      
+  </div> -->
+        <a href="javascript:" id="return-to-top"><i></i></a>
+        
+  <div class="section" id="run-gauge-specifications">
+<span id="id1"></span><h1>Run Gauge specifications<a class="headerlink" href="#run-gauge-specifications" title="Permalink to this headline">¶</a></h1>
+<div class="docutils container" id="proj-setup-filter-section">
+<div class="applied-filters docutils container">
+<div class="applied-filter docutils container">
+MacOs</div>
+<div class="applied-filter docutils container">
+JavaScript</div>
+<div class="applied-filter docutils container">
+VS Code</div>
+<div class="docutils container" id="change-filter">
+Change Filter</div>
+</div>
+<div class="proj-setup-filters hidden docutils container">
+<h4>Choose your setup</h4><div class="horizontal-line docutils container">
+</div>
+<div class="selections docutils container">
+<div class="selection docutils container">
+<h4>1 : Select your os</h4><span><input name="os"type="radio"value="linux">Linux</span><span><input checked="true"name="os"type="radio"value="macos">MacOS</span><span><input name="os"type="radio"value="windows">Windows</span></div>
+<div class="selection docutils container">
+<h4>2 : Select a Language</h4><span><input name="language"type="radio"value="csharp">Csharp</span><span><input name="language"type="radio"value="java">Java</span><span><input checked="true"name="language"type="radio"value="javascript">JavaScript</span><span><input name="language"type="radio"value="python">Python</span><span><input name="language"type="radio"value="ruby">Ruby</span></div>
+<div class="selection docutils container">
+<h4>3 : Select an IDE/Editor</h4><span><input name="ide"type="radio"value="intellij">Intellij</span><span><input name="ide"type="radio"value="visualstudio">Visual Studio</span><span><input checked="true"name="ide"type="radio"value="vscode">VS Code</span></div>
+</div>
+<div class="filter-actions docutils container">
+<div class="cancel filter-action docutils container">
+<h5>Cancel</h5></div>
+<div class="apply-filter filter-action docutils container">
+<h5>Apply Filter</h5></div>
+</div>
+</div>
+</div>
+<p>This page provides information about how to run a specification, multiple arguments that can be used with the <code class="docutils literal notranslate"><span class="pre">gauge</span> <span class="pre">run</span></code> command when a spec is executed,
+verbose reporting, data driven execution, parallel execution of specs, how to rerun failed and flaky tests, errors that occur when a spec is run, and troubleshooting information.</p>
+<p>For information about what a specification is and related details, see <a class="reference internal" href="writing-specifications.html#write-gauge-specification"><span class="std std-ref">Write Gauge specifications</span></a>.</p>
+<div class="section" id="run-a-specification">
+<h2>Run a specification<a class="headerlink" href="#run-a-specification" title="Permalink to this headline">¶</a></h2>
+<p>You can run a Gauge specification by using the <code class="docutils literal notranslate"><span class="pre">gauge</span> <span class="pre">run</span></code> command.
+When this command is run, Gauge scans the directories and sub-directories at <code class="docutils literal notranslate"><span class="pre">&lt;project_root&gt;</span></code> (location at which the Gauge project is created) and picks up valid specification files.</p>
+<div class="admonition-prerequisite admonition">
+<p class="first admonition-title">Prerequisite</p>
+<p class="last">You must have already created specification(s) at the <code class="docutils literal notranslate"><span class="pre">specs</span></code> directory or configured a directory(s) of your choice. For more information about <code class="docutils literal notranslate"><span class="pre">specs</span></code> directory, see <a class="reference internal" href="writing-specifications.html#specs-directory"><span class="std std-ref">Specs directory</span></a>.</p>
+</div>
+<p>You can use the following command at <code class="docutils literal notranslate"><span class="pre">&lt;project_root&gt;</span></code> to run a Gauge specification:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">gauge run [args] [flags]</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">&lt;project_root&gt;</span></code> - location at which a Gauge project is created</div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">[args]</span></code> - directories in which specifications are stored, location of specification files and scenarios</div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">[flags]</span></code> - options that can be used with this command such as <code class="docutils literal notranslate"><span class="pre">--tags</span></code>, <code class="docutils literal notranslate"><span class="pre">-e</span></code>, <code class="docutils literal notranslate"><span class="pre">-f</span></code>, and so on</div>
+<div class="line">For more information about <code class="docutils literal notranslate"><span class="pre">gauge</span> <span class="pre">run</span></code> command, see the Gauge man page.</div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Gauge specifications can also be run from within the IDE
+(<a class="reference external" href="https://github.com/getgauge/gauge-vscode/blob/master/README.md#run-specifications-and-scenarios">Visual Studio Code</a>,
+<a class="reference external" href="https://github.com/getgauge/Intellij-Plugin/blob/master/README.md#execution">IntelliJ IDEA</a>, Visual Studio)</p>
+</div>
+</div>
+<div class="section" id="multiple-arguments-passed-to-gauge-run">
+<h2>Multiple arguments passed to <code class="docutils literal notranslate"><span class="pre">gauge</span> <span class="pre">run</span></code><a class="headerlink" href="#multiple-arguments-passed-to-gauge-run" title="Permalink to this headline">¶</a></h2>
+<p>You can choose to run specifications at the directory, file, or scenario level or a combination of these by passing appropriate arguments to the <code class="docutils literal notranslate"><span class="pre">gauge</span> <span class="pre">run</span></code> command.
+The arguments are separated with a space when used with the command.</p>
+<p>The arguments can be one of the following:</p>
+<ul class="simple">
+<li>Directories and sub-directories that contain specifications</li>
+<li>Path to specification files and scenarios</li>
+<li>Combination of the arguments mentioned in this list</li>
+</ul>
+</div>
+<div class="section" id="run-specifications-by-using-directory-s-as-an-agrument">
+<h2>Run specifications by using directory(s) as an agrument<a class="headerlink" href="#run-specifications-by-using-directory-s-as-an-agrument" title="Permalink to this headline">¶</a></h2>
+<p>Specifications can be run from a single directory, sub-directories, or multiple directories.
+You can specify the directory(s) or path to sub-directory(s) with the <code class="docutils literal notranslate"><span class="pre">gauge</span> <span class="pre">run</span></code> command.</p>
+<p>To run all the specifications in the <code class="docutils literal notranslate"><span class="pre">specs</span></code> directory, use the following command:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">gauge run specs</span>
+</pre></div>
+</div>
+<p>To run specifications at the sub-directory level, use the following command:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">gauge run &lt;path_dir&gt;</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">&lt;path_dir&gt;</span></code> - location of the sub-directory where specifications are stored</p>
+<p>To run specifications stored in multiple directories (including sub-directories), use the following command:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">gauge run &lt;dir1&gt; &lt;path_dir2&gt; &lt;path_dir3&gt;</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">&lt;path_dir2&gt;</span></code> <code class="docutils literal notranslate"><span class="pre">&lt;path_dir3&gt;</span></code> - location of the directories where specifications are stored</p>
+<div class="section" id="example-single-directory">
+<h3>Example - single directory<a class="headerlink" href="#example-single-directory" title="Permalink to this headline">¶</a></h3>
+<p>In the following example, specifications stored at <code class="docutils literal notranslate"><span class="pre">test_specs</span></code> are run:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">gauge run test_specs</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="example-multiple-directories">
+<h3>Example - multiple directories<a class="headerlink" href="#example-multiple-directories" title="Permalink to this headline">¶</a></h3>
+<p>In the following example, specifications stored at <code class="docutils literal notranslate"><span class="pre">specs</span></code> and <code class="docutils literal notranslate"><span class="pre">test_specs</span></code> are run:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">gauge run specs test_specs</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="example-sub-directories">
+<h3>Example - sub-directories<a class="headerlink" href="#example-sub-directories" title="Permalink to this headline">¶</a></h3>
+<p>In the following example, specifications stored at <code class="docutils literal notranslate"><span class="pre">sub1_specs</span></code> and <code class="docutils literal notranslate"><span class="pre">sub2_specs</span></code> are run:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">gauge run specs/sub1_specs specs/sub2_specs</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">sub1_specs</span></code>, <code class="docutils literal notranslate"><span class="pre">sub2_specs</span></code> - directories located in <code class="docutils literal notranslate"><span class="pre">specs</span></code></p>
+</div>
+</div>
+<div class="section" id="run-specifications-by-using-spec-file-path-as-argument">
+<h2>Run specifications by using spec file path as argument<a class="headerlink" href="#run-specifications-by-using-spec-file-path-as-argument" title="Permalink to this headline">¶</a></h2>
+<p>You can choose and run only certain specifications by providing the appropriate location of these specifications with the <code class="docutils literal notranslate"><span class="pre">gauge</span> <span class="pre">run</span></code> command.</p>
+<p>To run a single specification, use the following command:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">gauge run &lt;path_to_spec&gt;</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">&lt;path_to_spec&gt;</span></code> - location of the specification</p>
+<p>To run multiple specifications, use the following command:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">gauge run &lt;path_to_spec1&gt; &lt;path_to_spec2&gt; &lt;path_to_spec3&gt;</span>
+</pre></div>
+</div>
+<div class="section" id="example-run-a-single-specification-file">
+<h3>Example - run a single specification file<a class="headerlink" href="#example-run-a-single-specification-file" title="Permalink to this headline">¶</a></h3>
+<p>In the following example, Gauge runs the <code class="docutils literal notranslate"><span class="pre">example.spec</span></code> stored in the <code class="docutils literal notranslate"><span class="pre">specs</span></code> directory:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">gauge run specs/example.spec</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="example-run-multiple-specification-files">
+<h3>Example - run multiple specification files<a class="headerlink" href="#example-run-multiple-specification-files" title="Permalink to this headline">¶</a></h3>
+<p>In the following example, Gauge runs multiple specifications stored in <code class="docutils literal notranslate"><span class="pre">specs</span></code> and its sub-directory, <code class="docutils literal notranslate"><span class="pre">sub1_specs</span></code>:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">gauge run specs/example.spec specs/sub1_specs/sub1_example.spec</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="run-specifications-by-using-path-to-scenario-as-argument">
+<h2>Run specifications by using path to scenario as argument<a class="headerlink" href="#run-specifications-by-using-path-to-scenario-as-argument" title="Permalink to this headline">¶</a></h2>
+<p>You can choose to run only scenarios of a specification.
+This can be either a single scenario or multiple scenarios.
+The argument to the <code class="docutils literal notranslate"><span class="pre">gauge</span> <span class="pre">run</span></code> command can be a specific scenario or a list of scenarios and the line number in the span of that scenario.
+Any line number which the scenario spans across can be used.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">For more information about scenarios, see <a class="reference internal" href="writing-specifications.html#longstart-scenarios"><span class="std std-ref">Scenario</span></a>.</p>
+</div>
+<p>To run a single scenario, use the following command:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">gauge run &lt;specification_path&gt;:&lt;scenario_line_number&gt;</span>
+</pre></div>
+</div>
+<p>To run multiple scenarios, use the following command:</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Multiple scenarios can belong to different specifications.</p>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">gauge run &lt;specification_path&gt;:&lt;scenario_line_number&gt; &lt;specification_path&gt;:&lt;scenario_line_number&gt;...</span>
+</pre></div>
+</div>
+<div class="section" id="example">
+<span id="spec-example-scenario"></span><h3>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h3>
+<p>Consider the following specification, <code class="docutils literal notranslate"><span class="pre">spec1.spec</span></code> located at <code class="docutils literal notranslate"><span class="pre">specs</span></code> directory:</p>
+<div class="highlight-gauge notranslate" id="specify-scenario"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><a href="#specify-scenario-1">1</a>
+<a href="#specify-scenario-2">2</a>
+<a href="#specify-scenario-3">3</a>
+<a href="#specify-scenario-4">4</a>
+<a href="#specify-scenario-5">5</a>
+<a href="#specify-scenario-6">6</a>
+<a href="#specify-scenario-7">7</a>
+<a href="#specify-scenario-8">8</a>
+<a href="#specify-scenario-9">9</a></pre></div></td><td class="code"><div class="highlight"><pre><span></span><a name="specify-scenario-1"></a><span class="k"># Configuration</span>
+<a name="specify-scenario-2"></a>
+<a name="specify-scenario-3"></a><span class="nc">## Admin Login</span>
+<a name="specify-scenario-4"></a><span class="nf">* User must login as </span><span class="l">&quot;admin&quot;</span><span class="nf"></span>
+<a name="specify-scenario-5"></a><span class="nf">* Navigate to the configuration page</span>
+<a name="specify-scenario-6"></a>
+<a name="specify-scenario-7"></a><span class="hll"><span class="nf">## User Login</span>
+</span><a name="specify-scenario-8"></a><span class="hll"><span class="nf">* User must login as </span><span class="l">&quot;user1&quot;</span><span class="nf"></span>
+</span><a name="specify-scenario-9"></a><span class="hll"><span class="nf">* Navigation to configuration page is restricted.</span>
+</span></pre></div>
+</td></tr></table></div>
+<div class="section" id="single-scenario">
+<h4>Single scenario<a class="headerlink" href="#single-scenario" title="Permalink to this headline">¶</a></h4>
+<p>To run only the second scenario, <code class="docutils literal notranslate"><span class="pre">User</span> <span class="pre">Login</span></code>, of <code class="docutils literal notranslate"><span class="pre">spec1.spec</span></code>, use the following command:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">gauge run specs/spec1.spec:7</span>
+</pre></div>
+</div>
+<p>Line 7 indicates that the second scenario is run.
+As this scenario spans from line 7 to 9, any line number including and between 7 and 9 can be used.
+Hence, you can also mention line 9 in the command as follows:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">gauge run specs/spec1.spec:9</span>
+</pre></div>
+</div>
+<p>In both cases, the <code class="docutils literal notranslate"><span class="pre">User</span> <span class="pre">Login</span></code> scenario is run.</p>
+</div>
+<div class="section" id="multiple-scenarios">
+<h4>Multiple scenarios<a class="headerlink" href="#multiple-scenarios" title="Permalink to this headline">¶</a></h4>
+<p>In addition to <code class="docutils literal notranslate"><span class="pre">spec1</span></code> used as an <a class="reference internal" href="#spec-example-scenario"><span class="std std-ref">example</span></a> previously, let us consider another spec, <code class="docutils literal notranslate"><span class="pre">test1</span></code>, in the <code class="docutils literal notranslate"><span class="pre">specs</span></code> directory as follows:</p>
+<div class="highlight-gauge notranslate" id="specify-additional-scenario"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><a href="#specify-additional-scenario-1">1</a>
+<a href="#specify-additional-scenario-2">2</a>
+<a href="#specify-additional-scenario-3">3</a>
+<a href="#specify-additional-scenario-4">4</a>
+<a href="#specify-additional-scenario-5">5</a>
+<a href="#specify-additional-scenario-6">6</a>
+<a href="#specify-additional-scenario-7">7</a></pre></div></td><td class="code"><div class="highlight"><pre><span></span><a name="specify-additional-scenario-1"></a><span class="k"># Search specification</span>
+<a name="specify-additional-scenario-2"></a>
+<a name="specify-additional-scenario-3"></a><span class="nc">## Successful search</span>
+<a name="specify-additional-scenario-4"></a><span class="nf">* Log in as </span><span class="l">&quot;admin&quot;</span><span class="nf"></span>
+<a name="specify-additional-scenario-5"></a><span class="nf">* Open the product search page</span>
+<a name="specify-additional-scenario-6"></a><span class="nf">* Search for product </span><span class="l">&quot;Cup Cakes&quot;</span><span class="nf"></span>
+<a name="specify-additional-scenario-7"></a><span class="nf">* </span><span class="l">&quot;Cup Cakes&quot;</span><span class="nf"> should show up in the search results</span>
+</pre></div>
+</td></tr></table></div>
+<p>To execute scenarios from both <code class="docutils literal notranslate"><span class="pre">spec1</span></code> and <code class="docutils literal notranslate"><span class="pre">test1</span></code>, run the following command:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">gauge run specs/spec1.spec:3 specs/test1.spec:4</span>
+</pre></div>
+</div>
+<p>In this case, <code class="docutils literal notranslate"><span class="pre">Admin</span> <span class="pre">Login</span></code> scenario is run from <code class="docutils literal notranslate"><span class="pre">spec1.spec</span></code> and <code class="docutils literal notranslate"><span class="pre">Successful</span> <span class="pre">search</span></code> scenario is run from <code class="docutils literal notranslate"><span class="pre">test1.spec</span></code>.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last"><code class="docutils literal notranslate"><span class="pre">test1.spec</span></code> can be located in a directory other than <code class="docutils literal notranslate"><span class="pre">specs</span></code>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="filter-specifications-and-scenarios-by-using-tags">
+<span id="tagged-execution"></span><h2>Filter specifications and scenarios by using tags<a class="headerlink" href="#filter-specifications-and-scenarios-by-using-tags" title="Permalink to this headline">¶</a></h2>
+<p>Tags allow filtering specs and scenarios.
+You can use the <code class="docutils literal notranslate"><span class="pre">--tags</span></code> flag with the <code class="docutils literal notranslate"><span class="pre">gauge</span> <span class="pre">run</span></code> command to filter specs and scenarios.</p>
+<div class="admonition-prerequisite admonition">
+<p class="first admonition-title">Prerequisite</p>
+<p class="last">You must have already labelled the specs and scenarios with tags. For more information about Tags, see <a class="reference internal" href="writing-specifications.html#longstart-tags"><span class="std std-ref">Tags</span></a>.</p>
+</div>
+<p>Use the following command to filter a Gauge specification or scenario by using tags:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">gauge run --tags &quot;Tag_Name&quot; specs</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">Tag_Name</span></code> - tag associated with the specs or scenarios</p>
+<p>When this command is run, only the scenarios and specifications which are tagged with <code class="docutils literal notranslate"><span class="pre">Tag_Name</span></code> are executed.</p>
+<div class="section" id="spec-example-tag">
+<span id="id2"></span><h3>Example<a class="headerlink" href="#spec-example-tag" title="Permalink to this headline">¶</a></h3>
+<p>Consider the following spec in the <code class="docutils literal notranslate"><span class="pre">specs</span></code> directory, which has tags <code class="docutils literal notranslate"><span class="pre">search</span></code> and <code class="docutils literal notranslate"><span class="pre">admin</span></code>.
+The scenario, <code class="docutils literal notranslate"><span class="pre">Successful</span> <span class="pre">search</span></code>, is tagged with <code class="docutils literal notranslate"><span class="pre">successful</span></code> and the scenario, <code class="docutils literal notranslate"><span class="pre">Unsuccessful</span> <span class="pre">search</span></code> has no tags.</p>
+<div class="highlight-gauge notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k"># Search Specification</span>
+
+<span class="nv">The admin user must be able to search for available products on the search page.</span>
+
+<span class="nt">Tags: search,  admin</span>
+
+<span class="nf">* User must be logged in as </span><span class="l">&quot;admin&quot;</span><span class="nf"></span>
+<span class="nf">* Open the product search page</span>
+
+<span class="nf">## Successful search</span>
+
+<span class="nf">Tags: successful</span>
+
+<span class="nf">For an existing product name, the search result will contain the product name.</span>
+
+<span class="nf">* Search for product </span><span class="l">&quot;Cup Cakes&quot;</span><span class="nf"></span>
+<span class="nf">* </span><span class="l">&quot;Cup Cakes&quot;</span><span class="nf"> should show up in the search results</span>
+
+<span class="nf">## Unsuccessful search</span>
+
+<span class="nf">On an unknown product name search, the search results will be empty</span>
+
+<span class="nf">* Search for product </span><span class="l">&quot;unknown&quot;</span><span class="nf"></span>
+<span class="nf">* The search results will be empty</span>
+</pre></div>
+</td></tr></table></div>
+<p>If the tag <code class="docutils literal notranslate"><span class="pre">search</span></code> is used, then the entire spec is run.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">gauge run --tags &quot;search&quot; specs</span>
+</pre></div>
+</div>
+<p>If the tag <code class="docutils literal notranslate"><span class="pre">successful</span></code> is used, the scenario, <code class="docutils literal notranslate"><span class="pre">Successful</span> <span class="pre">search</span></code> is run.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">gauge run --tags &quot;successful&quot; specs</span>
+</pre></div>
+</div>
+<p>Execution hooks can also be filtered based on tags. For more information, see <a class="reference internal" href="writing-specifications.html#write-gauge-specification"><span class="std std-ref">Write Gauge specifications</span></a>.</p>
+</div>
+</div>
+<div class="section" id="tag-expressions">
+<span id="id3"></span><h2>Tag expressions<a class="headerlink" href="#tag-expressions" title="Permalink to this headline">¶</a></h2>
+<p>Tags can be used with expressions.
+This helps you search and filter specs and scenarios effectively.
+The following table lists the tags and expressions and their corresponding action while selecting specs and scenarios.</p>
+<div class="admonition attention">
+<p class="first admonition-title">Attention</p>
+<p class="last">In the command line, while using the not symbol (!) with tags, (!) has to be preceded by escape (\).</p>
+</div>
+<table border="1" class="docutils">
+<colgroup>
+<col width="35%" />
+<col width="65%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Tags</th>
+<th class="head">Selects specs/scenarios that</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">!TagA</span></code></td>
+<td>do not have <code class="docutils literal notranslate"><span class="pre">TagA</span></code></td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">TagA</span> <span class="pre">&amp;</span> <span class="pre">TagB</span></code> or <code class="docutils literal notranslate"><span class="pre">TagA,TagB</span></code></td>
+<td>have both <code class="docutils literal notranslate"><span class="pre">TagA</span></code> and <code class="docutils literal notranslate"><span class="pre">TagB</span></code>.</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">TagA</span> <span class="pre">&amp;</span> <span class="pre">!TagB</span></code></td>
+<td>have <code class="docutils literal notranslate"><span class="pre">TagA</span></code> and not <code class="docutils literal notranslate"><span class="pre">TagB</span></code>.</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">TagA</span> <span class="pre">|</span> <span class="pre">TagB</span></code></td>
+<td>have either <code class="docutils literal notranslate"><span class="pre">TagA</span></code> or <code class="docutils literal notranslate"><span class="pre">TagB</span></code>.</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">(TagA</span> <span class="pre">&amp;</span> <span class="pre">TagB)</span> <span class="pre">|</span> <span class="pre">TagC</span></code></td>
+<td>have either <code class="docutils literal notranslate"><span class="pre">TagC</span></code> or both <code class="docutils literal notranslate"><span class="pre">TagA</span></code> and <code class="docutils literal notranslate"><span class="pre">TagB</span></code></td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">!(TagA</span> <span class="pre">&amp;</span> <span class="pre">TagB)</span> <span class="pre">|</span> <span class="pre">TagC</span></code></td>
+<td>have either <code class="docutils literal notranslate"><span class="pre">TagC</span></code> or do not have both TagA and TagB</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">(TagA</span> <span class="pre">|</span> <span class="pre">TagB)</span> <span class="pre">&amp;</span> <span class="pre">TagC</span></code></td>
+<td>have either [<code class="docutils literal notranslate"><span class="pre">TagA</span></code> and <code class="docutils literal notranslate"><span class="pre">TagC</span></code>] or [<code class="docutils literal notranslate"><span class="pre">TagB</span></code> and <code class="docutils literal notranslate"><span class="pre">TagC</span></code>]</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="id4">
+<h3>Example<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<p>Consider the spec of the previous <a class="reference internal" href="#spec-example-tag"><span class="std std-ref">example</span></a> - if all the scenarios tagged with <code class="docutils literal notranslate"><span class="pre">search</span></code> and <code class="docutils literal notranslate"><span class="pre">successful</span></code> must be run, then use the following command:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">gauge run --tags &quot;search &amp; successful&quot; specs</span>
+</pre></div>
+</div>
+<p>Based on the Tags expressions table, <code class="docutils literal notranslate"><span class="pre">Successful</span> <span class="pre">Search</span></code> scenario is run.</p>
+</div>
+</div>
+<div class="section" id="verbose-reporting">
+<h2>Verbose reporting<a class="headerlink" href="#verbose-reporting" title="Permalink to this headline">¶</a></h2>
+<p>By default, Gauge generates reports that display whether a spec has passed or failed when executed.
+To ease debugging, reports can also be generated for every step to display whether a step has been executed successfully.
+Such reports can be generated by using the <code class="docutils literal notranslate"><span class="pre">--verbose</span></code> flag.
+These reports are generated on the console.</p>
+<p>Use the following command to generate reports at the step level:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">gauge run --verbose specs</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="data-driven-execution">
+<span id="table-driven-execution"></span><h2>Data driven execution<a class="headerlink" href="#data-driven-execution" title="Permalink to this headline">¶</a></h2>
+<p>A data table is defined in Markdown table format at the beginning of the spec prior to steps.
+The data table should have a header row and one or more data rows.
+The header names from the table can be used in the steps within angular brackets <code class="docutils literal notranslate"><span class="pre">&lt;</span> <span class="pre">&gt;</span></code> to refer to a particular column from the data table as a parameter.</p>
+<p>When a spec is run, each scenario is executed for every data row of the table.
+Table parameters are written in Multi-Markdown table formats.</p>
+<div class="section" id="id5">
+<h3>Example<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<p>In the following specification <code class="docutils literal notranslate"><span class="pre">hello.spec</span></code>, the data table is defined at the beginning of the spec.
+The step uses the <code class="docutils literal notranslate"><span class="pre">name</span></code> column from the data table as a dynamic parameter.
+When the spec is run, <code class="docutils literal notranslate"><span class="pre">Scenario</span></code> and <code class="docutils literal notranslate"><span class="pre">Second</span> <span class="pre">Scenario</span></code> are executed first for the first row values <code class="docutils literal notranslate"><span class="pre">1</span></code>, <code class="docutils literal notranslate"><span class="pre">Alice</span></code> followed by the second and third row values from the table.</p>
+<div class="highlight-gauge notranslate" id="data-driven"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><a href="#data-driven-1"> 1</a>
+<a href="#data-driven-2"> 2</a>
+<a href="#data-driven-3"> 3</a>
+<a href="#data-driven-4"> 4</a>
+<a href="#data-driven-5"> 5</a>
+<a href="#data-driven-6"> 6</a>
+<a href="#data-driven-7"> 7</a>
+<a href="#data-driven-8"> 8</a>
+<a href="#data-driven-9"> 9</a>
+<a href="#data-driven-10">10</a>
+<a href="#data-driven-11">11</a>
+<a href="#data-driven-12">12</a>
+<a href="#data-driven-13">13</a></pre></div></td><td class="code"><div class="highlight"><pre><span></span><a name="data-driven-1"></a><span class="k"># Table driven execution</span>
+<a name="data-driven-2"></a>
+<a name="data-driven-3"></a><span class="nv">     |id| name    |</span>
+<a name="data-driven-4"></a><span class="nv">     |--|---------|</span>
+<a name="data-driven-5"></a><span class="nv">     |1 |Alice    |</span>
+<a name="data-driven-6"></a><span class="nv">     |2 |Bob      |</span>
+<a name="data-driven-7"></a><span class="nv">     |3 |Eve      |</span>
+<a name="data-driven-8"></a>
+<a name="data-driven-9"></a><span class="nc">## Scenario</span>
+<a name="data-driven-10"></a><span class="nf">* Say </span><span class="l">&quot;hello&quot;</span><span class="nf"> to </span><span class="l">&lt;name&gt;</span><span class="nf"></span>
+<a name="data-driven-11"></a>
+<a name="data-driven-12"></a><span class="nf">## Second Scenario</span>
+<a name="data-driven-13"></a><span class="nf">* Say </span><span class="l">&quot;namaste&quot;</span><span class="nf"> to </span><span class="l">&lt;name&gt;</span><span class="nf"></span>
+</pre></div>
+</td></tr></table></div>
+</div>
+</div>
+<div class="section" id="selected-data-table-rows">
+<h2>Selected data table rows<a class="headerlink" href="#selected-data-table-rows" title="Permalink to this headline">¶</a></h2>
+<p>By default, scenarios in a spec are run for every data table row.
+Scenarios can also be run against selected data table rows by using the <code class="docutils literal notranslate"><span class="pre">--table-rows</span></code> flag along with specifying the row numbers for which the scenarios should be run.
+If there are multiple row numbers, the row numbers should be separated by commas.
+A range of table rows can also be specified.</p>
+<div class="admonition important">
+<p class="first admonition-title">Important</p>
+<p class="last">Only a single specification can be run while using the <code class="docutils literal notranslate"><span class="pre">--table-rows</span></code> flag.</p>
+</div>
+<div class="section" id="examples">
+<h3>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h3>
+<p>In the following example, the scenarios in <code class="docutils literal notranslate"><span class="pre">hello.spec</span></code> (see <a class="reference internal" href="#table-driven-execution"><span class="std std-ref">Data driven execution</span></a>) are run only for the first row of the data table.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">gauge run --table-rows &quot;1&quot; specs/hello.spec</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">In the following example, multiple rows are specified by separating them with commas.</div>
+<div class="line">The scenarios from the <code class="docutils literal notranslate"><span class="pre">hello.spec</span></code> are run for the first and third rows of the data table.</div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">gauge run --table-rows &quot;1,3&quot; specs/hello.spec</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line">In the following example, a range of table rows is specified.</div>
+<div class="line">The scenarios from the <code class="docutils literal notranslate"><span class="pre">hello.spec</span></code> are run for the first, second, and third rows of the data table.</div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">gauge run --table-rows &quot;1-3&quot; specs/hello.spec</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="external-csv-for-data-table">
+<h3>External CSV for data table<a class="headerlink" href="#external-csv-for-data-table" title="Permalink to this headline">¶</a></h3>
+<p>Data Tables for a specification can also be passed from an external CSV file.</p>
+<p>For more information about external CSV files used in data tables, see <a class="reference internal" href="writing-specifications.html#parameters"><span class="std std-ref">Parameters</span></a>.</p>
+</div>
+<div class="section" id="id6">
+<h3>Example<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+<p>In this example, <code class="docutils literal notranslate"><span class="pre">users.csv</span></code> is the external CSV file that contains the following data table:</p>
+<div class="highlight-gauge notranslate"><div class="highlight"><pre><span></span><span class="nv">|id| name    |</span>
+<span class="nv">|--|---------|</span>
+<span class="nv">|1 |Alice    |</span>
+<span class="nv">|2 |Bob      |</span>
+<span class="nv">|3 |Eve      |</span>
+</pre></div>
+</div>
+<p>In the spec, the steps use the <code class="docutils literal notranslate"><span class="pre">&lt;name&gt;</span></code> column from the CSV file.</p>
+<div class="highlight-gauge notranslate" id="data-driven-external"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><a href="#data-driven-external-1">1</a>
+<a href="#data-driven-external-2">2</a>
+<a href="#data-driven-external-3">3</a>
+<a href="#data-driven-external-4">4</a>
+<a href="#data-driven-external-5">5</a>
+<a href="#data-driven-external-6">6</a>
+<a href="#data-driven-external-7">7</a>
+<a href="#data-driven-external-8">8</a>
+<a href="#data-driven-external-9">9</a></pre></div></td><td class="code"><div class="highlight"><pre><span></span><a name="data-driven-external-1"></a><span class="k"># Table driven execution</span>
+<a name="data-driven-external-2"></a>
+<a name="data-driven-external-3"></a><span class="nv">table: /system/users.csv</span>
+<a name="data-driven-external-4"></a>
+<a name="data-driven-external-5"></a><span class="nc">## Scenario</span>
+<a name="data-driven-external-6"></a><span class="nf">* Say </span><span class="l">&quot;hello&quot;</span><span class="nf"> to </span><span class="l">&lt;name&gt;</span><span class="nf"></span>
+<a name="data-driven-external-7"></a>
+<a name="data-driven-external-8"></a><span class="nf">## Second Scenario</span>
+<a name="data-driven-external-9"></a><span class="nf">* Say </span><span class="l">&quot;namaste&quot;</span><span class="nf"> to </span><span class="l">&lt;name&gt;</span><span class="nf"></span>
+</pre></div>
+</td></tr></table></div>
+</div>
+</div>
+<div class="section" id="parallel-execution">
+<span id="id7"></span><h2>Parallel execution<a class="headerlink" href="#parallel-execution" title="Permalink to this headline">¶</a></h2>
+<p>Specs can be executed in parallel to run the tests faster.
+Running tests in parallel creates a number of execution streams depending on the  number of CPU cores available on your system and distributes the load among worker processes.</p>
+<p>The number of parallel execution streams can be specified by using the <code class="docutils literal notranslate"><span class="pre">-n</span></code> flag.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">It could lead to undesirable results if the number of streams specified is more than the number of CPU cores available on your system.
+For optimizations, you can also use threads. See <a class="reference internal" href="#parallel-execution-using-threads"><span class="std std-ref">Parallel execution by using threads</span></a>.</p>
+</div>
+<p>Use the following command to run specs in parallel:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">gauge run --parallel specs</span>
+</pre></div>
+</div>
+<p>OR</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">gauge run -p specs</span>
+</pre></div>
+</div>
+<div class="section" id="id8">
+<h3>Example<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
+<p>In the following example, four parallel execution streams are created.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">gauge run --parallel -n=4 specs</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="parallel-execution-by-using-threads">
+<span id="parallel-execution-using-threads"></span><h3>Parallel execution by using threads<a class="headerlink" href="#parallel-execution-by-using-threads" title="Permalink to this headline">¶</a></h3>
+<p>In parallel execution, every stream starts a new worker process. This can be optimized
+by using multithreading instead of processes. Multithreading uses only one worker process and
+starts multiple threads for parallel execution.</p>
+<div class="line-block">
+<div class="line">To use the multithreading feature, the <code class="docutils literal notranslate"><span class="pre">enable_multithreading</span></code> environment variable must be set to <code class="docutils literal notranslate"><span class="pre">true</span></code>. If not already present, you can add this variable to the <code class="docutils literal notranslate"><span class="pre">default.properties</span></code> file.</div>
+<div class="line">For more information about <code class="docutils literal notranslate"><span class="pre">default.properties</span></code>, see <a class="reference internal" href="configuration.html#local-configuration-gauge"><span class="std std-ref">Local configuration of Gauge (default.properties)</span></a>.</div>
+</div>
+<div class="admonition-prerequisites admonition">
+<p class="first admonition-title">Prerequisites</p>
+<p class="last">Use thread-safe test code. Use a language runner that supports multithreading.</p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Currently, only the Java language runner supports parallel execution of specs by using threads.</p>
+</div>
+</div>
+</div>
+<div class="section" id="test-suite-execution-by-using-the-strategy-option">
+<h2>Test suite execution by using the <code class="docutils literal notranslate"><span class="pre">--strategy</span></code> option<a class="headerlink" href="#test-suite-execution-by-using-the-strategy-option" title="Permalink to this headline">¶</a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">--strategy</span></code> option allows you to set the strategy for parallel execution of tests.
+This option has two values: <code class="docutils literal notranslate"><span class="pre">lazy</span></code> and <code class="docutils literal notranslate"><span class="pre">eager</span></code>. By default, the option is set to <code class="docutils literal notranslate"><span class="pre">lazy</span></code>.</p>
+<div class="section" id="lazy">
+<h3><code class="docutils literal notranslate"><span class="pre">lazy</span></code><a class="headerlink" href="#lazy" title="Permalink to this headline">¶</a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">lazy</span></code> feature enables Gauge to dynamically allocate specs to streams during execution instead of at the beginning of execution.
+This allows Gauge to optimise the resources on your system or execution environment.
+Such optimization is useful because some specs might take more time to get executed than the others.
+This could be either because of the number of scenarios in the specs or the nature of the feature under test.</p>
+<p><code class="docutils literal notranslate"><span class="pre">lazy</span></code> is the default value of the <code class="docutils literal notranslate"><span class="pre">--strategy</span></code> option.</p>
+<p>The following command assigns tests lazily across the specified number of streams:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">gauge run -n=4 --strategy=&quot;lazy&quot; specs</span>
+</pre></div>
+</div>
+<p>OR</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">gauge run -n=4 specs</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The <code class="docutils literal notranslate"><span class="pre">lazy</span></code> value cannot be used when the <code class="docutils literal notranslate"><span class="pre">-g</span></code> flag is used with the <code class="docutils literal notranslate"><span class="pre">gauge</span> <span class="pre">run</span></code> command.
+This is because the grouping of tests depends on allocation of tests before the beginning of test execution, however, <code class="docutils literal notranslate"><span class="pre">lazy</span></code> is used during execution of tests.
+Using the <code class="docutils literal notranslate"><span class="pre">-g</span></code> flag with <code class="docutils literal notranslate"><span class="pre">--strategy=lazy</span></code> has no impact on your test suite execution.</p>
+</div>
+<div class="section" id="id9">
+<h4>Example<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h4>
+<p>If there are 100 tests, which have to be run across four streams or cores, Gauge dynamically assigns the next spec in queue to the stream that has completed its previous test execution and is waiting for more work.</p>
+</div>
+</div>
+<div class="section" id="eager">
+<h3><code class="docutils literal notranslate"><span class="pre">eager</span></code><a class="headerlink" href="#eager" title="Permalink to this headline">¶</a></h3>
+<p>When the <code class="docutils literal notranslate"><span class="pre">-g</span> <span class="pre">(grouping)</span></code> flag is used, the value of the <code class="docutils literal notranslate"><span class="pre">strategy</span></code> option is <code class="docutils literal notranslate"><span class="pre">eager</span></code>.
+In this strategy, Gauge allocates specs to streams at the beginning of test execution.</p>
+<div class="section" id="id10">
+<h4>Example<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h4>
+<p>When <code class="docutils literal notranslate"><span class="pre">eager</span></code> is used, if 100 tests are run, these tests are equally distributed before execution in the number of streams as mentioned by the <code class="docutils literal notranslate"><span class="pre">-n</span></code> option.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">gauge run -n=4 --strategy=&quot;eager&quot; specs</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="executing-a-group-of-specification">
+<h3>Executing a group of specification<a class="headerlink" href="#executing-a-group-of-specification" title="Permalink to this headline">¶</a></h3>
+<p>Gauge sorts the specifications by alphabetical order and then distributes these specifications into groups.
+You can use the <code class="docutils literal notranslate"><span class="pre">--group</span></code> | <code class="docutils literal notranslate"><span class="pre">-g</span></code> flag to execute a specific group of specs.</p>
+<p>Executing specs with  the <code class="docutils literal notranslate"><span class="pre">-n</span></code> and <code class="docutils literal notranslate"><span class="pre">--g</span></code> flags ensures that Gauge executes the same group of specifications in the same order
+regardless of the number of times the <code class="docutils literal notranslate"><span class="pre">gauge</span> <span class="pre">run</span></code> command is executed.</p>
+<p>Use the following command to execute a group of specifications:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">gauge run -n=&lt;number_of_groups&gt; -g=&lt;group_number&gt; specs</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">-n</span></code> - number of groups</div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">-g</span></code> - group number</div>
+</div>
+<div class="section" id="id11">
+<h4>Example<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h4>
+<p>In the following example, Gauge creates four groups of specification and selects the second group for execution.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">gauge run -n=4 -g=2 specs</span>
+</pre></div>
+</div>
+<p>Even if the command is run multiple times, Gauge still executes the same group of specifications in the same order.</p>
+</div>
+</div>
+</div>
+<div class="section" id="rerun-failed-scenarios">
+<h2>Rerun failed scenarios<a class="headerlink" href="#rerun-failed-scenarios" title="Permalink to this headline">¶</a></h2>
+<p>Gauge provides the ability to rerun only the scenarios which failed in the previous execution.
+You can use the <code class="docutils literal notranslate"><span class="pre">--failed</span></code> flag with the <code class="docutils literal notranslate"><span class="pre">gauge</span> <span class="pre">run</span></code> command to rerun failed scenarios.</p>
+<div class="admonition-prerequisite admonition">
+<p class="first admonition-title">Prerequisite</p>
+<p class="last">You must have already run the specifications by using the <code class="docutils literal notranslate"><span class="pre">gauge</span> <span class="pre">run</span></code> command.</p>
+</div>
+<p>Use the following command to rerun failed scenarios:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">gauge run --failed</span>
+</pre></div>
+</div>
+<p>For example, if three scenarios failed during <code class="docutils literal notranslate"><span class="pre">gauge</span> <span class="pre">run</span> <span class="pre">specs</span></code>, the failed scenarios can be rerun instead of executing all scenarios.</p>
+<p>When the <code class="docutils literal notranslate"><span class="pre">--failed</span></code> flag is used with the <code class="docutils literal notranslate"><span class="pre">gauge</span> <span class="pre">run</span></code> command, the flags that were set during the previous execution is once again set.</p>
+<div class="section" id="id12">
+<h3>Example<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">Consider an example, where specs are run with a <code class="docutils literal notranslate"><span class="pre">--env</span></code> and <code class="docutils literal notranslate"><span class="pre">--verbose</span></code> flags.</div>
+<div class="line">Three scenarios fail during this run.</div>
+</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">gauge run --env=&quot;chrome&quot; --verbose specs</span>
+</pre></div>
+</div>
+<p>To rerun only the failed scenarios, use the following command:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">gauge run --failed</span>
+</pre></div>
+</div>
+<p>When this command is run, Gauge internally sets the <code class="docutils literal notranslate"><span class="pre">--env</span></code> and <code class="docutils literal notranslate"><span class="pre">--verbose</span></code> flags  to corresponding values used in the previous execution.
+Hence, <code class="docutils literal notranslate"><span class="pre">gauge</span> <span class="pre">run</span> <span class="pre">--failed</span></code> is equivalent to the following command:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">gauge run --env=&quot;chrome&quot; --verbose specs &lt;path_to_failed_scenarios&gt;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="rerun-failed-scenarios-by-using-max-retries-count">
+<h2>Rerun failed scenarios by using <code class="docutils literal notranslate"><span class="pre">--max-retries-count</span></code><a class="headerlink" href="#rerun-failed-scenarios-by-using-max-retries-count" title="Permalink to this headline">¶</a></h2>
+<p>You can use the <code class="docutils literal notranslate"><span class="pre">--max-retries-count</span></code> flag to rerun failed tests for a specific number of times.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last"><code class="docutils literal notranslate"><span class="pre">--max-retries-count</span></code> feature is also useful if there are flaky tests in your test suite.</p>
+</div>
+<p>Use the following command to rerun failed tests for a specific number of times:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">gauge run --max-retries-count=&lt;number of retries&gt;</span>
+</pre></div>
+</div>
+<div class="section" id="id13">
+<h3>Example<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h3>
+<p>In the following example, Gauge reruns a failed test for a maximum of three times and then marks the spec as failed.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">gauge run --max-retries-count=3</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="rerun-failed-scenarios-by-using-retry-only">
+<h2>Rerun failed scenarios by using <code class="docutils literal notranslate"><span class="pre">--retry-only</span></code><a class="headerlink" href="#rerun-failed-scenarios-by-using-retry-only" title="Permalink to this headline">¶</a></h2>
+<p>You can filter scenarios that must be rerun a specific number of times when failed by using the <code class="docutils literal notranslate"><span class="pre">--retry-only</span></code> flag.
+The value of this flag is the tag used to associate the scenario(s).</p>
+<p>Use the following command to rerun failed scenarios for a specific number of times:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">gauge run --max-retries-count=&lt;number of retries&gt; --retry-only &quot;&lt;tag_name&gt;&quot;</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">&lt;tag_name&gt;</span></code> - name of the tag used to label the scenario(s) that should be rerun when failed</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Tags can also be used with expressions. For more information about using tags with expressions, see <a class="reference internal" href="#tag-expressions"><span class="std std-ref">Tag expressions</span></a> .</p>
+</div>
+<div class="section" id="id14">
+<h3>Example<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h3>
+<p>In the following example, Gauge reruns only those scenarios that have the <code class="docutils literal notranslate"><span class="pre">should-retry</span></code> tag .
+Gauge runs these scenarios thrice as specified by the <code class="docutils literal notranslate"><span class="pre">--max-retries-count</span></code> flag.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">gauge run --max-retries-count=3 --retry-only=&quot;should-retry&quot;</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If <code class="docutils literal notranslate"><span class="pre">--retry-only</span></code> flag is not specified, all scenarios are retried the number of times as specified in <code class="docutils literal notranslate"><span class="pre">--max-retries-count</span></code>.</p>
+</div>
+</div>
+</div>
+<div class="section" id="errors-during-execution">
+<h2>Errors during execution<a class="headerlink" href="#errors-during-execution" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="parse-errors">
+<h3>Parse errors<a class="headerlink" href="#parse-errors" title="Permalink to this headline">¶</a></h3>
+<p>This occurs if the spec or concept file doesn’t follow the
+expected <a class="reference internal" href="writing-specifications.html#spec-syntax"><span class="std std-ref">specifications</span></a> or <a class="reference internal" href="writing-specifications.html#concept"><span class="std std-ref">concepts</span></a> syntax.</p>
+<p><strong>Example:</strong></p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>[ParseError] hello_world.spec : line no: 25, Dynamic parameter &lt;product&gt; could not be resolved
+</pre></div>
+</div>
+<p>List of various Parse errors:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="57%" />
+<col width="43%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Parse Error</th>
+<th class="head">Gauge Execution Behaviour</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Step is not defined inside a concept
+heading</td>
+<td>Stops</td>
+</tr>
+<tr class="row-odd"><td>Circular reference found in concept</td>
+<td>Stops</td>
+</tr>
+<tr class="row-even"><td>Concept heading can only have dynamic
+parameters</td>
+<td>Stops</td>
+</tr>
+<tr class="row-odd"><td>Concept should have at least one step</td>
+<td>Stops</td>
+</tr>
+<tr class="row-even"><td>Duplicate concept definition found</td>
+<td>Stops</td>
+</tr>
+<tr class="row-odd"><td>Scenario heading is not allowed in
+concept file</td>
+<td>Stops</td>
+</tr>
+<tr class="row-even"><td>Table doesn’t belong to any step</td>
+<td>Ignores table,Continue</td>
+</tr>
+<tr class="row-odd"><td>Table header cannot have repeated column
+values</td>
+<td>Marks that spec as
+failed,Continues for others</td>
+</tr>
+<tr class="row-even"><td>Teardown should have at least three
+underscore characters</td>
+<td>Marks that spec as
+failed,Continues for other</td>
+</tr>
+<tr class="row-odd"><td>Scenario heading should have at least one
+character</td>
+<td>Marks that spec as
+failed,Continues for other</td>
+</tr>
+<tr class="row-even"><td>Table header should be not blank</td>
+<td>Marks that spec as
+failed,Continues for other</td>
+</tr>
+<tr class="row-odd"><td>Multiple spec headings found in the same
+file</td>
+<td>Marks that spec as
+failed,Continues for other</td>
+</tr>
+<tr class="row-even"><td>Scenario should be defined after the spec
+heading</td>
+<td>Marks that spec as
+failed,Continues for other</td>
+</tr>
+<tr class="row-odd"><td>Could not resolve table from file</td>
+<td>Marks that spec as
+failed,Continues for other</td>
+</tr>
+<tr class="row-even"><td>Spec does not have any element</td>
+<td>Marks that spec as
+failed,Continues for other</td>
+</tr>
+<tr class="row-odd"><td>Spec heading not found</td>
+<td>Marks that spec as
+failed,Continues for other</td>
+</tr>
+<tr class="row-even"><td>Spec heading should have at least one
+character</td>
+<td>Marks that spec as
+failed,Continues for other</td>
+</tr>
+<tr class="row-odd"><td>Dynamic param could not be resolved</td>
+<td>Marks that spec as
+failed,Continues for other</td>
+</tr>
+<tr class="row-even"><td>Step should not be blank</td>
+<td>Marks that spec as
+failed,Continues for other</td>
+</tr>
+<tr class="row-odd"><td>Duplicate scenario definition found in
+the same specification</td>
+<td>Marks that spec as
+failed,Continues for other</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="validation-errors">
+<h3>Validation Errors<a class="headerlink" href="#validation-errors" title="Permalink to this headline">¶</a></h3>
+<p>These are errors for which <cite>Gauge</cite> skips executing the spec where the error occurs.</p>
+<p>There are two types of validation error which can occurs</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><dl class="first docutils">
+<dt>Step implementation not found</dt>
+<dd>If the spec file has a step that does not have an implementation in the projects programming language.</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Duplicate step implementation</dt>
+<dd>If the spec file has a step that is implemented multiple times in the projects.</dd>
+</dl>
+</li>
+</ol>
+</div></blockquote>
+<p><strong>Example</strong></p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>[ValidationError] login.spec:33: Step implementation not found. login with &quot;user&quot; and &quot;p@ssword&quot;
+</pre></div>
+</div>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>[ValidationError] foo.spec:11 Duplicate step implementation =&gt; &#39;Vowels in English language are &lt;table&gt;&#39;
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="troubleshooting">
+<h1>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permalink to this headline">¶</a></h1>
+<p>Ensure that the latest version of gauge and <a class="reference external" href="//gauge.org/plugins/">gauge plugins</a>.</p>
+<p>Run <code class="docutils literal notranslate"><span class="pre">gauge</span> <span class="pre">update</span> <span class="pre">-c</span></code> to check if there are updates available for gauge and the plugins.</p>
+<div class="section" id="id15">
+<h2>Validation Errors<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>[WARN] Validation failed. The following steps have errors
+...
+</pre></div>
+</div>
+<p>These generally occur if step implementation is not found for a particular step.</p>
+<ul class="simple">
+<li>Ensure the <a class="reference internal" href="writing-specifications.html#language-steps"><span class="std std-ref">step implementation</span></a> for the step has been added.</li>
+<li>The <a class="reference internal" href="writing-specifications.html#language-steps"><span class="std std-ref">step template</span></a> marking the step in code is case sensitive and should match the step usage in the spec file.</li>
+</ul>
+</div>
+<div class="section" id="compatibility-errors">
+<h2>Compatibility errors<a class="headerlink" href="#compatibility-errors" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Failed to start a runner. Compatible runner version to 0.0.7 not found
+</pre></div>
+</div>
+<ul class="simple">
+<li>The language plugin installed is not compatible with the gauge version installed.</li>
+<li>Run <code class="docutils literal notranslate"><span class="pre">gauge</span> <span class="pre">install</span> <span class="pre">language_NAME</span></code> to install the latest compatible version. See <a class="reference internal" href="plugin.html#install-plugins"><span class="std std-ref">plugin installation</span></a> for
+more details</li>
+</ul>
+</div>
+<div class="section" id="execution-errors">
+<h2>Execution Errors<a class="headerlink" href="#execution-errors" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Error: too many open files
+</pre></div>
+</div>
+<ul class="simple">
+<li>This error occurs when the upper limit to open the number of files is too low. To fix the error, increase the upper limit by adding the command <code class="docutils literal notranslate"><span class="pre">ulimit</span> <span class="pre">-S</span> <span class="pre">-n</span> <span class="pre">2048</span></code> to your <code class="docutils literal notranslate"><span class="pre">~/.profile</span></code> file and relogin.</li>
+</ul>
+</div>
+</div>
+
+
+        
+        <!-- </div> -->
+      </div>
+      <!-- Right Sidebar -->
+      
+      <div class="right-sidebar-container containers">
+        <div class="localtoc-container">
+          <ul class="localtoc">
+            <ul>
+<li><a class="reference internal" href="#">Run Gauge specifications</a><ul>
+<li><a class="reference internal" href="#run-a-specification">Run a specification</a></li>
+<li><a class="reference internal" href="#multiple-arguments-passed-to-gauge-run">Multiple arguments passed to <code class="docutils literal notranslate"><span class="pre">gauge</span> <span class="pre">run</span></code></a></li>
+<li><a class="reference internal" href="#run-specifications-by-using-directory-s-as-an-agrument">Run specifications by using directory(s) as an agrument</a><ul>
+<li><a class="reference internal" href="#example-single-directory">Example - single directory</a></li>
+<li><a class="reference internal" href="#example-multiple-directories">Example - multiple directories</a></li>
+<li><a class="reference internal" href="#example-sub-directories">Example - sub-directories</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#run-specifications-by-using-spec-file-path-as-argument">Run specifications by using spec file path as argument</a><ul>
+<li><a class="reference internal" href="#example-run-a-single-specification-file">Example - run a single specification file</a></li>
+<li><a class="reference internal" href="#example-run-multiple-specification-files">Example - run multiple specification files</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#run-specifications-by-using-path-to-scenario-as-argument">Run specifications by using path to scenario as argument</a><ul>
+<li><a class="reference internal" href="#example">Example</a><ul>
+<li><a class="reference internal" href="#single-scenario">Single scenario</a></li>
+<li><a class="reference internal" href="#multiple-scenarios">Multiple scenarios</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#filter-specifications-and-scenarios-by-using-tags">Filter specifications and scenarios by using tags</a><ul>
+<li><a class="reference internal" href="#spec-example-tag">Example</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#tag-expressions">Tag expressions</a><ul>
+<li><a class="reference internal" href="#id4">Example</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#verbose-reporting">Verbose reporting</a></li>
+<li><a class="reference internal" href="#data-driven-execution">Data driven execution</a><ul>
+<li><a class="reference internal" href="#id5">Example</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#selected-data-table-rows">Selected data table rows</a><ul>
+<li><a class="reference internal" href="#examples">Examples</a></li>
+<li><a class="reference internal" href="#external-csv-for-data-table">External CSV for data table</a></li>
+<li><a class="reference internal" href="#id6">Example</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#parallel-execution">Parallel execution</a><ul>
+<li><a class="reference internal" href="#id8">Example</a></li>
+<li><a class="reference internal" href="#parallel-execution-by-using-threads">Parallel execution by using threads</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#test-suite-execution-by-using-the-strategy-option">Test suite execution by using the <code class="docutils literal notranslate"><span class="pre">--strategy</span></code> option</a><ul>
+<li><a class="reference internal" href="#lazy"><code class="docutils literal notranslate"><span class="pre">lazy</span></code></a><ul>
+<li><a class="reference internal" href="#id9">Example</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#eager"><code class="docutils literal notranslate"><span class="pre">eager</span></code></a><ul>
+<li><a class="reference internal" href="#id10">Example</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#executing-a-group-of-specification">Executing a group of specification</a><ul>
+<li><a class="reference internal" href="#id11">Example</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#rerun-failed-scenarios">Rerun failed scenarios</a><ul>
+<li><a class="reference internal" href="#id12">Example</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#rerun-failed-scenarios-by-using-max-retries-count">Rerun failed scenarios by using <code class="docutils literal notranslate"><span class="pre">--max-retries-count</span></code></a><ul>
+<li><a class="reference internal" href="#id13">Example</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#rerun-failed-scenarios-by-using-retry-only">Rerun failed scenarios by using <code class="docutils literal notranslate"><span class="pre">--retry-only</span></code></a><ul>
+<li><a class="reference internal" href="#id14">Example</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#errors-during-execution">Errors during execution</a><ul>
+<li><a class="reference internal" href="#parse-errors">Parse errors</a></li>
+<li><a class="reference internal" href="#validation-errors">Validation Errors</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#troubleshooting">Troubleshooting</a><ul>
+<li><a class="reference internal" href="#id15">Validation Errors</a></li>
+<li><a class="reference internal" href="#compatibility-errors">Compatibility errors</a></li>
+<li><a class="reference internal" href="#execution-errors">Execution Errors</a></li>
+</ul>
+</li>
+</ul>
+
+          </ul>
+        </div>
+        <div class="col-md-9 help-note">
+          <h4>Need Help?</h4>
+          <a href="">Read the troubleshooting guide.</a>
+          <br>
+          <span>Reach out to our comminity</span>
+          <ul>
+            <li><a href="https://gitter.im/getgauge/chat" class="icon_gitter">Gitter</a> </li>
+            <li><a href="https://groups.google.com/forum/#!forum/getgauge" class="icon_google">Google Group</a> </li>
+            <li><a href="https://stackoverflow.com/questions/tagged/getgauge" class="icon_stack">Stack Overflow</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+    <!-- </div> -->
+    <footer>
+      <div class="footer">
+        <div class="footer_items product">
+          <h5>Product</h5>
+          <nav class="footer_links">
+            <ul class="foolinks">
+              <li> <a href="//preview.gauge.org/get_started/">Get started</a> </li>
+              <li> <a href="//preview.gauge.org/#features">Features</a> </li>
+              <li> <a href="//preview.gauge.org/plugins/">Plugins</a> </li>
+              <li> <a href="/">Documentation</a> </li>
+              <li> <a href="//preview.gauge.org/blog/">Blog</a></li>
+              <li> <a href="//brandfolder.com/twproducts" target="_blank">Press Kit</a></li>
+
+            </ul>
+          </nav>
+        </div>
+        <div class="footer_items explore">
+          <h5>Explore</h5>
+          <nav class="footer_links">
+            <ul class="foolinks">
+              <li> <a href="browse.html">Table of Contents</a> </li>
+              <li> <a href="//waffle.io/getgauge/gauge" target="_blank">Roadmap</a> </li>
+              <li> <a href="//manpage.gauge.org/" target="_blank">Gauge Commands</a> </li>
+              <li><a href="//thoughtworks.com/privacy-policy" target="_blank">Privacy</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="footer_items engage">
+          <h5>Engage</h5>
+          <nav class="footer_links">
+            <ul class="foolinks">
+              <li> <a href="//gitter.im/getgauge/chat" class="icon_gitter">Gitter</a> </li>
+              <li> <a href="//groups.google.com/forum/#!forum/getgauge" class="icon_google">Google Group</a> </li>
+              <li> <a href="//stackoverflow.com/questions/tagged/getgauge" class="icon_stack">Stack Overflow</a> </li>
+              <li> <a href="//github.com/getgauge/gauge/blob/master/CONTRIBUTING.md"
+                  class="icon_contribute">Contribute</a> </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="footer_items follow">
+          <h5>Follow us</h5>
+          <nav class="footer_links">
+            <ul class="foolinks">
+              <li> <a href="//github.com/getgauge/gauge" target="_blank"><i class="fab fa-github"></i></a> <a
+                  href="//twitter.com/getgauge" target="_blank"><i class="fab fa-twitter"></i></a></li>
+            </ul>
+          </nav>
+          <div class="licence">
+            <p>Gauge is an open-source project, sponsored by <a href="//www.thoughtworks.com/"
+                target="_blank">ThoughtWorks Inc.</a> under the GPL License, Version 3.0</p>
+          </div>
+        </div>
+      </div>
+<script type="text/javascript" id="documentation_options" data-url_root="./"
+  src="_static/documentation_options.js"></script>
+<script type="text/javascript" src="_static/jquery.js"></script>
+<script type="text/javascript" src="_static/underscore.js"></script>
+<script type="text/javascript" src="_static/doctools.js"></script>
+<script type="text/javascript" src="_static/language_data.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<script type="text/javascript" src="_static/js/site.js"></script>
+<script type="text/javascript" src="_static/js/theme.js"></script>
+<script type="text/javascript" src="_static/js/filter.js"></script>
+<script type="text/javascript" src="_static/js/installation.js"></script>
+    </footer>
+  <!-- </div> -->
+</body>
+
+</html>
