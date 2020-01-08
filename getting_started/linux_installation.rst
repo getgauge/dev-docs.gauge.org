@@ -28,7 +28,7 @@ Gauge can be installed on any flavour of Linux using the shell script. The Follo
 .. cssclass:: dynamic-content linux
 .. code-block:: console
 
-    echo deb https://dl.bintray.com/gauge/gauge-deb nightly main | sudo tee - a /etc/apt/sources.list
+    echo deb https://dl.bintray.com/gauge/gauge-deb nightly main | sudo tee -a /etc/apt/sources.list
 
 .. cssclass:: dynamic-content linux
 .. code-block:: console
